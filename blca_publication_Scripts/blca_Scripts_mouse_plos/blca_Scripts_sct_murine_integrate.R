@@ -114,13 +114,45 @@ png(paste0(outdir,'blca_publication_OUTPUT_fig/blca_publication_source.png'),wid
 p1 + p2
 dev.off()
 
-
+library(ggplot2)
+library(dplyr)
 
 # Extract metadata
 df <- seurat.integrated@meta.data %>%
   filter(seurat_clusters == 0) %>%  # Only keep cluster 0
   count(Sample) %>%  
-  mutate(Frequency = n / sum(n))  # Compute relative frequency
+  mutate(Frequency = sum(n))  # Compute relative frequency
+
+df$Sample <- factor(df$Sample, levels = c("GSM5288674", "GSM5288673", "GSM5288672",
+                                          "GSM5288671", "GSM5288670", "GSM5288669", 
+                                          "GSM5288668"))  
+# Horizontal Bar Plot (Cell Counts)
+ggplot(df, aes(x = Sample, y = n, fill = Sample)) +  # Order by counts
+  geom_bar(stat = "identity", color = "black", width = 0.7) +  # Add border color
+  scale_fill_manual(values = c('red', 'green', 'blue', 'yellow', 'brown', 'orange', 'purple')) +  # Assign custom colors
+  coord_flip() +  # Make bars horizontal
+  labs(x = "Sample", y = "Cell Counts", fill = "Sample") +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_text(size = 14,),  # Adjust y-axis text size
+    axis.text.x = element_text(size = 14,angle = 90),
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 14)
+  )
+png(paste0(outdir,'blca_publication_OUTPUT_fig/blca_publication_fig_bar.png'),width = 2200,height = 1800,res=300)
+dev.off()
+
+
+ggplot(df, aes(x = "", y = Frequency, fill = Sample)) +
+  scale_fill_manual(values = c('red', 'green', 'blue', 'yellow', 'brown', 'orange', 'purple')) +  # Assign custom colors
+  
+  geom_bar(stat = "identity", width = 1, color = "white") +  # Add border color if needed
+  labs(fill = "Sample") +
+  theme_void() +  
+  theme(
+    legend.text = element_text(size = 14),
+    legend.title = element_text(size = 14)
+  )
 
 # Define Sample order
 df$Sample <- factor(df$Sample, levels = c("GSM5288674", "GSM5288673", "GSM5288672",
