@@ -72,7 +72,7 @@ norm_s_onc_df = pd.DataFrame(np.stack([cst_onc.n, cst_onc.s], axis=1),
                              index=cst_onc.svm_input.data.columns, columns=["n", "s"])
 
 #Run
-cst = CellStateTransition('test', nmibc_df, mibc_df)
+cst = CellStateTransition('inv', nmibc_df, mibc_df)
 dpd_scores = cst.get_dpd()
 
 norm_s_df = pd.DataFrame(np.stack([cst.n, cst.s], axis=1), index=cst.svm_input.data.columns, columns=["n", "s"])
