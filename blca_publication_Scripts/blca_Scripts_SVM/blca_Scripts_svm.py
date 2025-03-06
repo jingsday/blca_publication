@@ -1,5 +1,6 @@
 import anndata
 import pandas as pd
+import scanpy as sc
 
 import cstarpy
 import os
@@ -17,7 +18,6 @@ adata = sc.read_mtx(mtx)
 adata.obs['CellID']= cells.index.tolist()
 adata.var['Gene']= features.index.tolist()
 adata.var.index= adata.var['Gene']
-display(adata)
 print(f'Max val of sct matrix before transformation, {np.max(adata.X)}')
 
 m_h_conversion = pd.read_csv('/home/jing/Phd_project/project_UCD_blca/blca_OUTPUT/blca_OUTPUT_m_h_convert/m_h_convertion.csv',index_col='Mouse_Genes')
@@ -78,7 +78,7 @@ dpd_scores = cst.get_dpd()
 norm_s_df = pd.DataFrame(np.stack([cst.n, cst.s], axis=1), index=cst.svm_input.data.columns, columns=["n", "s"])
 
 pd.to_pickle(dpd_scores,"dpd_lincs_sct_inv_blca_N_M.pkl")
-pd.to_pickle(norm_s_df,"/stv_lincs_sct_inv_blca_N_M.pkl")
+pd.to_pickle(norm_s_df,"stv_lincs_sct_inv_blca_N_M.pkl")
 
 pd.to_pickle(dpd_onc_scores,"dpd_lincs_sct_onc_healthy_onc.pkl")
 pd.to_pickle(norm_s_onc_df,"stv_lincs_sct_onc_healthy_onc.pkl")
@@ -89,3 +89,5 @@ DPD_onc = cst_onc.get_dpd(data_all_cells)
 DPD_all = pd.concat([DPD_invasive, DPD_onc], axis=1)
 
 pd.to_pickle(DPD_all,"plot_lincs_sct_onc_inv.pkl")
+
+print('Finished')

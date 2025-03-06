@@ -1,0 +1,4 @@
+/home/jing/Phd_project/project_UCD_blca/blca_publication/blca_publication_Scripts/blca_Scripts_SVM/blca_Scripts_svm.py:31: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'CEP57' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  adata.var.at[i, 'Lincs'] = m_h_conversion.at[i, 'Human_Genes']
+Max val of sct matrix before transformation, 8.334712028503418
+Max val after log1p, 9.472813606262207
