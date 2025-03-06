@@ -1,44 +1,40 @@
+library(biomaRt)
+library(dplyr)
 
+datadir <-'/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/'
 
-ConvertEnsembleToSymbol <- function(
-mat,
-species = c('human', 'mouse')
-) {
-species <- match.arg(arg = species)
-if (species == 'human') {
-database <- 'hsapiens_gene_ensembl'
-symbol <- 'hgnc_symbol'
+# Load mouse gene names
+features <- read.csv(paste0(datadir, 'blca_publication_OUTPUT_sct/', 'sct_corrected_UMI_genes.txt'), 
+                     header = FALSE, stringsAsFactors = FALSE)
 
-} else if (species == 'mouse') {
-database <- 'mmusculus_gene_ensembl'
-symbol <- 'mgi_symbol'
+# Create a dataframe with gene names
+name_df <- data.frame(mouse_gene = features$V1)  # Assuming gene names are in the first column
+name_df$orig.id <- name_df$mouse_gene
 
-} else {
-stop('species name not found')
-}
+# Convert to character type (to prevent errors in joins)
+name_df$mouse_gene <- as.character(name_df$mouse_gene)
 
-library("biomaRt")
-library("dplyr")
+# Connect to Ensembl and select the mouse dataset
+mouse_mart <- useMart("ensembl", dataset = "mmusculus_gene_ensembl")
 
-name_df <- data.frame(gene_id = c(rownames(mat)))
-name_df$orig.id <- name_df$gene_id
-#make this a character, otherwise it will throw errors with left_join
-name_df$gene_id <- as.character(name_df$gene_id)
-#in case it's gencode, this mostly works
-#if ensembl, will leave it alone
-name_df$gene_id <- sub("[.][0-9]*","",name_df$gene_id)
-mart <- useDataset(dataset = database, useMart("ensembl"))
-genes <- name_df$gene_id
-gene_IDs <- getBM(filters= "ensembl_gene_id",
-attributes= c("ensembl_gene_id", symbol),
-values = genes,
-mart= mart)
-gene.df <- left_join(name_df, gene_IDs, by = c("gene_id"="ensembl_gene_id"))
+# Query Ensembl to get human homologs
+gene_IDs <- getBM(
+  filters = "external_gene_name",
+  attributes = c("external_gene_name", "hsapiens_homolog_ensembl_gene", "hsapiens_homolog_associated_gene_name"),
+  values = name_df$mouse_gene,
+  mart = mouse_mart
+)
+
+# Merge mouse genes with human homologs
+gene.df <- left_join(name_df, gene_IDs, by = c("mouse_gene" = "external_gene_name"))
+
+# Remove rows without human homologs
+gene.df <- gene.df[!is.na(gene.df$hsapiens_homolog_associated_gene_name), ]
+
+# Ensure row names are unique
 rownames(gene.df) <- make.unique(gene.df$orig.id)
-gene.df <- gene.df[rownames(mat),]
-gene.df <-gene.df[gene.df[,symbol] != '',]
-gene.df <- gene.df[ !is.na(gene.df$orig.id),]
-mat.filter <- mat[gene.df$orig.id,]
-rownames(mat.filter) <- make.unique(gene.df[,symbol])
-return(mat.filter)
-}
+
+
+write.csv(gene.df,paste0(datadir, 'blca_publication_OUTPUT_sct/','blca_publication_OUTPUT_m_h.csv'))
+
+          
