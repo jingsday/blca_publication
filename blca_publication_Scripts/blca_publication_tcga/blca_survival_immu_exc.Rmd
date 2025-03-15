@@ -1,0 +1,255 @@
+---
+title: "tcga_chemo"
+author: "Jing"
+date: "2025-03-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(survival)
+library(survminer)
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+```{r}
+
+setwd("/home/jing/Phd_project/project_UCD_blca/blca_DATA/blca_DATA_tcga_pan_can_atlas_2018/blca_DATA_tcga_pan_can_atlas_2018")
+
+out_dir <- '/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/blca_publication_OUTPUT_survival/'
+```
+
+```{r}
+
+clin_raw <- read.delim("data_clinical_patient.txt", sep = '\t',skip = 4)
+
+table(clin_raw$AJCC_PATHOLOGIC_TUMOR_STAGE)
+#Filtered by stages of interest
+
+clin_raw <- clin_raw[clin_raw$AJCC_PATHOLOGIC_TUMOR_STAGE %in% c("STAGE II","STAGE III", "STAGE IV"), ]
+#double check
+table(clin_raw$AJCC_PATHOLOGIC_TUMOR_STAGE)
+
+rownames(clin_raw) <- clin_raw$PATIENT_ID
+length(clin_raw$PATIENT_ID)
+
+RNA_raw <- read.delim("data_mrna_seq_v2_rsem_zscores_ref_all_samples.txt",check.names = FALSE)
+RNA_raw[is.na(RNA_raw)] <- 0
+RNA_raw <- RNA_raw[RNA_raw$Hugo_Symbol!='',]
+RNA_raw <- RNA_raw[!duplicated(RNA_raw$Hugo_Symbol),]
+rownames(RNA_raw) <- RNA_raw$Hugo_Symbol
+RNA <- as.data.frame(t(RNA_raw[-1:-2]))
+
+#retrieve RNAs of interest
+RNA <- RNA[str_sub(row.names(RNA), end = -4) %in% row.names(clin), ]
+
+clin <- clin_raw[str_sub(row.names(RNA), end = -4),]
+clin <- clin[!is.na(clin$OS_MONTHS) & !is.na(clin$OS_STATUS), ]
+
+
+# now creating object without zero times
+clin_filt <- clin[clin$OS_MONTHS > 0,]
+RNA_filt <- RNA[clin$OS_MONTHS > 0,]
+```
+
+```{r}
+
+excluded_df <- read.delim2(file='/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/blca_publication_OUTPUT_survival/excluded_df.csv',sep = ',')
+
+#removed 7 records
+clin_filt <- clin_filt[!rownames(clin_filt) %in% unique(excluded_df$PATIENT_ID), ]
+RNA_filt <- RNA_filt[str_sub(row.names(RNA_filt), end = -4) %in% row.names(clin_filt), ]
+
+
+#KP curves
+surv_filt <- Surv(time = clin_filt$OS_MONTHS, 
+                  event = clin_filt$OS_STATUS=="1:DECEASED")
+
+fit <- survfit(surv_filt ~ 1, data = clin_filt)
+ggsurvplot(fit, data = clin_filt, xlab = "Month", ylab = "Overall survival",surv.median.line = "hv")
+
+which(is.na(surv_filt))
+```
+
+```{r Full genes}
+
+# glmnet
+library("glmpath")
+library("glmnet")
+library("penalized")
+
+
+fit_glm <- glmnet(RNA_filt,surv_filt,family="cox")#, alpha = 1) #, alpha = 1, standardize = TRUE, maxit = 1000
+print(fit_glm)
+# analysing results
+
+cfs = coef(fit_glm,s= 0.002235)#96th  79.64% deviance
+meaning_coefs = rownames(cfs)[cfs[,1]!= 0]
+meaning_vals = cfs[cfs[,1]!=0,]
+
+coef_data <-data.frame(variable=meaning_coefs,coefficient=meaning_vals)
+rownames(coef_data)
+
+sorted_coef_abs <- coef_data[order(-abs(coef_data$coefficient)), ]
+
+top_100 <- head(sorted_coef_abs,100)
+list(top_100$variable)
+
+
+# Create bar plot
+ggplot(coef_data, aes(x = reorder(variable, coefficient), y = coefficient)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  coord_flip() +  # Rotate axis labels
+  labs(title = "Coefficients from glmnet Model", 
+       x = "Genes", y = "Coefficient") +
+  theme_minimal()
+
+#Cross validation
+cvfit <- cv.glmnet(data.matrix(RNA_filt),surv_filt,family="cox",type.measure = "C")
+plot(cvfit)
+```
+
+```{r}
+library(progeny)
+zscores = as.matrix(t(RNA_filt))
+pathways <- progeny(zscores, scale=TRUE, organism="Human")  #, top = 100, perm = 1)
+path_df = as.data.frame(pathways)
+# fit multivariate model (COX proportional hazard) 
+fit.coxph <- coxph(surv_filt ~ MAPK + PI3K  +  p53 + TGFb  + `JAK-STAT` + TNFa, 
+                   data = path_df)
+ggforest(fit.coxph, data = path_df)
+
+fit.coxph <- coxph(surv_filt ~ NFkB + Androgen +  VEGF + `JAK-STAT` + TGFb, 
+                   data = path_df)
+ggforest(fit.coxph, data = path_df)
+```
+
+
+```{r glm LINCs}
+
+gene_lincs <- read.csv("gl_lincs.csv")
+
+RNA_lincs <- RNA_filt[, colnames(RNA_filt) %in% gene_lincs$gene]
+
+fit_glm <- glmnet(RNA_lincs,surv_filt,family="cox")#, alpha = 1) #, alpha = 1, standardize = TRUE, maxit = 1000
+print(fit_glm)
+
+# analysing results
+cfs = coef(fit_glm,s= 0.001554)#99th  72.21% deviance
+meaning_coefs = rownames(cfs)[cfs[,1]!= 0]
+meaning_vals = cfs[cfs[,1]!=0,]
+
+coef_data <-data.frame(variable=meaning_coefs,coefficient=meaning_vals)
+rownames(coef_data)
+#write.csv(coef_data, file = paste0(out_dir,"blca_OUTPUT_tcga_immu_exc.csv"), row.names = FALSE)
+
+sorted_coef_abs <- coef_data[order(-abs(coef_data$coefficient)), ]
+
+top_100 <- head(sorted_coef_abs,100)
+list(top_100$variable)
+
+
+# Create bar plot
+ggplot(coef_data, aes(x = reorder(variable, coefficient), y = coefficient)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  coord_flip() +  # Rotate axis labels
+  labs(title = "Coefficients from glmnet Model", 
+       x = "Genes", y = "Coefficient") +
+  theme_minimal()
+
+#Cross validation
+cvfit <- cv.glmnet(data.matrix(RNA_lincs),surv_filt,family="cox",type.measure = "C")
+plot(cvfit)
+```
+
+
+```{r}
+rna_raw <- read.delim("data_mrna_seq_v2_rsem.txt",check.names = FALSE)
+
+rna_raw[is.na(rna_raw)] <- 0
+rna_raw <- rna_raw[rna_raw$Hugo_Symbol!='',]
+rna_raw <- rna_raw[!duplicated(rna_raw$Hugo_Symbol),]
+rownames(rna_raw) <- rna_raw$Hugo_Symbol
+rna <- as.data.frame(t(rna_raw[-1:-2]))
+
+#retrieve RNAs of interest
+rna <- rna[str_sub(row.names(rna), end = -4) %in% row.names(clin_raw), ]
+#rna <- rna[-261,]
+rna_log2 <- apply(rna, c(1, 2), function(value) log2(value + 1))
+
+max(rna_log2)
+min(rna_log2)
+
+cols<-intersect(gene_lincs$gene, colnames(RNA_lincs))
+# Subset the matrix
+
+rna_log2_subset <- rna_log2[, coef_data$variable]
+coef_data_subset <-coef_data[,-1]
+
+dim(rna_log2_subset)
+dim(coef_data_subset)
+
+dot_product_result <- rna_log2_subset %*% coef_data_subset
+
+clin_filt$DPD_prognosis <- dot_product_result[str_sub(row.names(dot_product_result), end = -4) %in% row.names(clin_filt), ]
+hist(clin_filt$DPD_prognosis)
+clin_filt$outcome <- ifelse(clin_filt$DPD_prognosis > 0, "positive",
+                       ifelse(clin_filt$DPD_prognosis == 0, "0", "negative"))
+
+```
+
+```{r}
+fit2.coxph <- coxph(Surv(time = clin_filt$OS_MONTHS, 
+                        event = clin_filt$OS_STATUS=="1:DECEASED") ~ outcome+SEX+AJCC_PATHOLOGIC_TUMOR_STAGE, data = clin_filt)
+# 
+# svg(filename = paste0(out_dir, "hazard_ratio.svg"))
+# 
+# # Plot your figure
+# ggforest(fit2.coxph, data = clin_filt)
+# 
+# # Close the SVG device
+# dev.off()
+
+# Check
+table(clin_filt$outcome,clin_filt$AJCC_PATHOLOGIC_TUMOR_STAGE)
+fit <- survfit(surv_ ~ 1, data = clin)
+
+dpd_outcome <- survfit(surv_filt ~ clin_filt$outcome, data = clin_filt)
+ggsurvplot(dpd_outcome,data = clin_filt,pval=T)
+surv_plot <- ggsurvplot(
+  dpd_outcome,
+  data = clin_filt,
+  pval = TRUE,
+  xlab = 'Month',
+  legend.title = "DPD",
+  legend.labs = c("Positive", "Negative"),
+  legend.size = 1.5,
+  legend = "top",
+  risk.table = TRUE
+)
+
+
+# Save the plot as a PNG
+ggsave(
+  filename = paste0(out_dir,"survival_final_plot.png"),
+  plot = surv_plot$plot,
+  device = "png",
+  width = 8,
+  height = 4,
+  dpi = 300
+)
+
+ggsave(
+  filename = paste0(out_dir,"risk_final_table.png"),
+  plot = surv_plot$table,         # Use the risk table component
+  device = "png",
+  width = 8,
+  height = 2,
+  dpi = 300
+)
+
+
+```
+
