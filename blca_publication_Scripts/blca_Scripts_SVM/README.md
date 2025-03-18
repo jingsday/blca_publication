@@ -1,6 +1,2 @@
-Mar 5th
 
-Annotate figures per origin on the plots
-Do start with figures (to be updated method param.)
-
-SVM per origin 
+Updating STVs from corrected SVM separation doesn't cause major changes as expected. Progressiveness in particular doesn't change much.
