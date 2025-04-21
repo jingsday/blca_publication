@@ -17,3 +17,7 @@ str(counts)
 seurat_object = CreateSeuratObject(counts = counts)
 
 str(seurat_object)
+
+data <- read.delim("~/Desktop/GSE155512_RAW/GSM4705589_RPE004_matrix.txt.gz", header = T, stringsAsFactors = F)
+seurat <- CreateSeuratObject(data, min.cells = 10, min.features = 200, project = "seurat")
+seurat[["percent.mt"]] <- PercentageFeatureSet(seurat, pattern = "^MT-")
