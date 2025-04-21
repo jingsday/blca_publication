@@ -15,3 +15,5 @@ counts <- read.delim(paste0(data_dir,"GSM5329919_BCN_gene_cell_exprs_table.xls.g
 str(counts)
 
 seurat_object = CreateSeuratObject(counts = counts)
+
+str(seurat_object)
