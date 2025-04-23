@@ -66,7 +66,9 @@ dim(merged_seurat@meta.data)
 obj.list <- SplitObject(merged_seurat_qc, split.by = 'Sample')
 
 obj.list <- lapply(X = obj.list, FUN = SCTransform)
+
 features <- SelectIntegrationFeatures(object.list = obj.list, nfeatures = 3000)
+
 obj.list <- PrepSCTIntegration(
   obj.list,
   anchor.features = features
