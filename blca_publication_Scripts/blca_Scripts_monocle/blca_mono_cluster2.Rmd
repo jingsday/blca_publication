@@ -264,7 +264,7 @@ emb_time_terms <- fit_coefs %>% filter(term == "pseudotime")
 
 emb_time_terms %>% filter (q_value < 0.05) %>%
          select(gene_short_name, term, q_value, estimate)
-emb_time_terms
+
 
 plot_genes_violin(cds_re, group_cells_by="pseudotime", ncol=2) +
       theme(axis.text.x=element_text(angle=45, hjust=1))
