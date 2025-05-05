@@ -1,0 +1,272 @@
+---
+title: "blca_Scripts_monocle3_attempt"
+author: "Jing"
+date: "2025-05-05"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+suppressMessages(library(Matrix))
+suppressMessages(library(rhdf5))
+suppressMessages(library(monocle3))
+
+library(dplyr)     
+ROOT.DIR <- '/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/blca_publication_OUTPUT_monocle/'
+DATA.PATH <- file.path(ROOT.DIR, "data", "processed_data.h5")
+     
+```
+```{r}
+# Read matrix
+barcodes <- h5read(DATA.PATH, "expression_matrix/barcodes")
+features <- h5read(DATA.PATH, "expression_matrix/features")
+data <- h5read(DATA.PATH, "expression_matrix/data")
+indices <- h5read(DATA.PATH, "expression_matrix/indices")
+indptr <- h5read(DATA.PATH, "expression_matrix/indptr")
+
+expr.mtx <- Matrix::sparseMatrix(
+  i=indices, p=indptr, x=as.numeric(data),
+  dimnames=list(as.character(features), as.character(barcodes)),
+  index1=FALSE, repr="C")
+
+# Read parameters
+umap <- t(h5read(DATA.PATH, "UMAP"))
+leiden <- h5read(DATA.PATH, "Leiden")
+
+
+# Create cell_data_set
+cds <- new_cell_data_set(expr.mtx)
+
+# UMAP
+rownames(umap) <- barcodes
+cds@int_colData@listData$reducedDims@listData[["UMAP"]] <- umap
+
+umap <- as.matrix(umap)
+rownames(umap) <- colnames(cds)  # Important for matching
+
+reducedDims(cds)$UMAP <- umap
+
+## Clusters
+names(leiden) <- cds@colData@rownames
+leiden <- as.factor(leiden)
+cds@clusters@listData[["UMAP"]][["clusters"]] <- leiden
+
+rowData(cds)$gene_short_name <- row.names(rowData(cds))
+cds@colData$cluster <- as.factor(leiden)
+
+```
+
+```{r}
+
+cds
+
+plot_cells(cds, genes=c("KRT5"))
+
+plot_cells(cds, reduction_method="UMAP")
+
+```
+
+
+```{r}
+recreate.partitions <- c(rep(1, length(cds@colData@rownames)))
+names(recreate.partitions) <- cds@colData@rownames
+recreate.partitions <- as.factor(recreate.partitions)
+
+cds@clusters@listData[["UMAP"]][["partitions"]] <- recreate.partitions
+
+cds <- learn_graph(cds)
+
+plot_cells(cds,
+           label_groups_by_cluster=T,
+           label_leaves=FALSE,
+           label_branch_points=FALSE)
+
+plot_cells(cds, label_groups_by_cluster = TRUE)
+
+plot_cells(cds, genes=c("KRT5", "CD36", "S100A"))
+#markers
+marker_test_res <- top_markers(cds, group_cells_by="cluster", 
+                               reference_cells=1000, cores=8)
+
+top_specific_markers <- marker_test_res %>%
+                            filter(fraction_expressing >= 0.10) %>%
+                            group_by(cell_group) %>%
+                            top_n(1, pseudo_R2)
+
+top_specific_marker_ids <- unique(top_specific_markers %>% pull(gene_id))
+
+plot_genes_by_group(cds,
+                    top_specific_marker_ids,
+                    group_cells_by="cluster",
+                    ordering_type="maximal_on_diag",
+                    max.size=3)
+
+top_specific_markers <- marker_test_res %>%
+                            filter(fraction_expressing >= 0.10) %>%
+                            group_by(cell_group) %>%
+                            top_n(5, pseudo_R2)
+
+top_specific_marker_ids <- unique(top_specific_markers %>% pull(gene_id))
+
+plot_genes_by_group(cds,
+                    top_specific_marker_ids,
+                    group_cells_by="cluster",
+                    ordering_type="cluster_row_col",
+                    max.size=3)
+```
+
+
+```{r}
+cds <- learn_graph(cds, use_partition=FALSE, close_loop=FALSE, learn_graph_control = list( prune_graph=TRUE))
+
+root_cells <- colnames(cds)[cds@clusters@listData[["UMAP"]][["clusters"]] == "1"]
+
+cds <- order_cells(cds,
+                   reduction_method = "UMAP",
+                   root_cells = root_cells)
+
+
+plot_cells(cds,
+           reduction_method = "UMAP",
+           color_cells_by = "cluster",
+           label_groups_by_cluster=FALSE,
+           label_leaves=TRUE,
+           label_principal_points =FALSE,
+           label_roots = FALSE,
+           label_branch_points=FALSE
+           )
+
+plot_cells(cds,
+           color_cells_by = "pseudotime",
+           label_cell_groups=FALSE,
+           label_leaves=FALSE,
+           label_branch_points=FALSE,
+           graph_label_size=1.5)
+```
+
+
+```{r}
+gene_fits <- fit_models(cds, model_formula_str = "~pseudotime")
+
+fit_coefs <- coefficient_table(gene_fits)
+```
+
+
+
+```{r}
+pseudo_time_terms <- fit_coefs %>% filter(term == "pseudotime")
+
+pseudo_time_terms %>% filter (q_value < 0.05) %>%
+         select(gene_short_name, term, q_value, estimate)
+
+
+
+```
+
+```{r}
+plot_genes_violin(cds_subset, group_cells_by="cluster", ncol=2) +
+      theme(axis.text.x=element_text(angle=45, hjust=1))
+
+head(pseudo_time_terms$gene_short_name,20)
+
+
+```
+
+```{r}
+
+AFD_genes <- head(pseudo_time_terms$gene_short_name,20)
+AFD_lineage_cds <- cds[rowData(cds)$gene_short_name %in% AFD_genes]
+
+AFD_lineage_cds <- order_cells(AFD_lineage_cds)
+
+plot_genes_in_pseudotime(cds,
+                         color_cells_by="pseudotime",
+                         min_expr=0.5)
+```
+
+```{r}
+plot_cells(cds, genes=c("KRT5", "CD36", "GCLC"),
+           show_trajectory_graph=FALSE,
+           label_cell_groups=FALSE,
+           label_leaves=FALSE)
+```
+
+
+
+```{r}
+library(ggplot2)
+
+cds_subset <- cds[rowData(cds)$gene_short_name %in% head(pseudo_time_terms$gene_short_name,20),]
+
+plot_genes_violin(cds_subset, group_cells_by="cluster", ncol=2) +
+  theme(axis.text.x=element_text(angle=45, hjust=1))
+
+plot_genes_hybrid(cds_subset, group_cells_by="cluster", ncol=2) +
+  theme(axis.text.x=element_text(angle=45, hjust=1))
+
+```
+```{r}
+pr_graph_test_res <- graph_test(cds, neighbor_graph="knn", cores=8)
+pr_graph_test_res
+pr_deg_ids <- row.names(subset(pr_graph_test_res, q_value < 0.05))
+
+gene_module_df <- find_gene_modules(cds[pr_deg_ids,], resolution=c(10^seq(-6,-1)))
+
+#####not working here
+```
+```{r}
+gene_fits <- fit_models(cds_subset, model_formula_str = "~cluster")
+fit_coefs <- coefficient_table(gene_fits)
+time_terms <- fit_coefs %>% filter(term == "pseudotime")
+
+time_terms %>% filter (q_value < 0.05) %>%
+         select(gene_short_name, term, q_value, estimate)
+```
+
+```{r}
+cds_re <- learn_graph(cds, use_partition=FALSE, close_loop=FALSE, learn_graph_control = list(euclidean_distance_ratio=3, minimal_branch_len=15, prune_graph=TRUE)) # , use_partition = FALSE #learn_graph_control=list(ncenter=250), close_loop = FALSE)
+
+
+cds_re <- order_cells(cds_re,
+                   reduction_method = "UMAP",
+                   root_cells = root_cells)
+
+
+
+plot_cells(cds_re,
+           reduction_method = "UMAP",
+           color_cells_by = "cluster",
+           label_groups_by_cluster=FALSE,
+           label_leaves=TRUE,
+           label_principal_points =FALSE,
+           label_roots = FALSE,
+           label_branch_points=FALSE
+           )
+
+plot_cells(cds_re,
+           color_cells_by = "pseudotime",
+           label_cell_groups=FALSE,
+           label_leaves=FALSE,
+           label_branch_points=FALSE,
+           graph_label_size=1.5)
+
+
+
+```
+```{r}
+cds_re_sub <- choose_graph_segments(cds_re)
+
+gene_fits <- fit_models(cds_re, model_formula_str = "~pseudotime")
+fit_coefs <- coefficient_table(gene_fits)
+emb_time_terms <- fit_coefs %>% filter(term == "pseudotime")
+
+emb_time_terms %>% filter (q_value < 0.05) %>%
+         select(gene_short_name, term, q_value, estimate)
+emb_time_terms
+
+plot_genes_violin(cds_re, group_cells_by="pseudotime", ncol=2) +
+      theme(axis.text.x=element_text(angle=45, hjust=1))
+```
+
