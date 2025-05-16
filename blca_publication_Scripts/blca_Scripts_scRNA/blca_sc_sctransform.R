@@ -76,11 +76,10 @@ obj.list <- PrepSCTIntegration(
 
 anchors <- FindIntegrationAnchors(object.list = obj.list, normalization.method = "SCT",
                                   anchor.features = features)
-
 seurat.integrated <- IntegrateData(anchorset = anchors, normalization.method = "SCT")
 
 outdir <- '/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/'
-saveRDS(seurat.integrated, file = paste0(outdir,"human_intergration_sct.rds"))
+#saveRDS(seurat.integrated, file = paste0(outdir,"human_intergration_sct.rds"))
 #worked this time 
 
 corrected_UMI <- seurat.integrated[["SCT"]]$data
@@ -92,3 +91,69 @@ write.table(colnames(corrected_UMI), file = paste0(outdir, "blca_scR_corrected_U
 
 #check gene row length. Might be mismatch. Version 1 or v2 might solve. 
 #One more thing 
+
+###DEG 
+
+seurat.integrated <- RunPCA(seurat.integrated, verbose = FALSE)
+seurat.integrated <- RunUMAP(seurat.integrated, reduction = "pca", dims = 1:30, verbose = FALSE)
+seurat.integrated <- FindNeighbors(seurat.integrated, reduction = "pca", dims = 1:30)
+seurat.integrated <- FindClusters(seurat.integrated, resolution = 0.3)
+
+
+DimPlot(seurat.integrated, reduction = "umap")
+head(seurat.integrated@meta.data)
+#Passing annnotation 
+annotation <- read.delim('/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/non_immune_cells_obs.csv',sep=',')
+annotation$IDs <- paste0(annotation$source,'_',  annotation$CellID)
+
+seurat_meta <- seurat.integrated@meta.data
+seurat_meta$cellID <- rownames(seurat_meta)
+
+# Then merge
+merged_df <- merge(seurat_meta, annotation[, c('IDs', 'leiden', 'Stage')],
+                   by.x = "cellID", by.y = "IDs", all.x = TRUE)
+
+rownames(merged_df) <- merged_df$cellID
+seurat.integrated@meta.data <- merged_df[, setdiff(colnames(merged_df), "cellID")]
+head(seurat.integrated@meta.data)
+
+seurat.integrated@meta.data$target_cells <- paste0(seurat.integrated@meta.data$leiden,'_',seurat.integrated@meta.data$Stage)
+DimPlot(seurat.integrated, reduction = "umap", split.by = "Stage")
+
+table(seurat.integrated@meta.data$target_cells)
+
+Idents(seurat.integrated) <- "target_cells"
+seurat.integrated <- PrepSCTFindMarkers(seurat.integrated)
+
+invasive_sig <- FindMarkers(seurat.integrated, assay = "SCT", ident.1 = "1_T2", ident.2 = "1_Ta",
+                                     verbose = FALSE)
+head(invasive_sig, n = 15)
+
+rownames(invasive_sig[invasive_sig$p_val_adj < 0.05, ])#6669
+
+#write.csv(invasive_sig,paste0(outdir,'invasive_sig.csv'))
+#Check overlap with LINCS genes 
+library(readxl)
+
+stv <- read_excel('/home/jing/Phd_project/project_GBM/gbm_OUTPUT/gbm_OUTPUT_LINCS/ALL_DATA_2020_Jing_gbm_del.xlsx',
+                  sheet = 'STVs')
+common_lincs <- intersect(rownames(invasive_sig[invasive_sig$p_val_adj < 0.05, ]), stv$Gene) # 532
+
+
+#
+DefaultAssay(seurat.integrated) <-'SCT'
+FeaturePlot(seurat.integrated, features = c("CD36", "S100A8", "SPINK1"), split.by = "Stage", max.cutoff = 3,
+            cols = c("grey", "red"))
+Idents(seurat.integrated) <- "leiden"
+
+cluster1 <- FindConservedMarkers(seurat.integrated, assay = "SCT", ident.1 = "1", grouping.var = "Stage",
+                                   verbose = FALSE)
+head(cluster1)
+FeaturePlot(seurat.integrated, features = c("RPS27", "FTH1", "CSTB"), split.by = "Stage", max.cutoff = 3,
+            cols = c("grey", "red"))
+VlnPlot(seurat.integrated, features = c("S100A7", "S100A8", "S100A9"), split.by = "Stage",
+                 group.by = "leiden", pt.size = 0, combine = FALSE)
+wrap_plots(plots = plots, ncol = 1)
+cluster1 <- cluster1[cluster1$max_pval<0.05,]
+#write.csv(cluster1,paste0(outdir,'canonical_c1_sig.csv'))
+
