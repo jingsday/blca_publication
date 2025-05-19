@@ -1,3 +1,8 @@
+### Please search for 'Can start from here'(without ' ') 
+### to start
+### Data are available in onedrive and please feel free to download
+### Any help needed I am willing to provide :)
+
 library(Seurat)
 library(ggplot2)
 library(tidyverse)
@@ -6,7 +11,7 @@ library(Matrix)
 library(stringr)
 library(sctransform)
 data_dir <- '/home/jing/Phd_project/project_UCD_blca/blca_DATA/blca_DATA_GSE135337/'
-dirs <- list.files(data_dir) # Should show barcodes.tsv.gz, features.tsv.gz, and matrix.mtx.gz
+dirs <- list.files(data_dir) 
 
 names_list <- c()  # Create an empty list to store the names
 for (x in dirs) {
@@ -82,12 +87,16 @@ outdir <- '/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/'
 #saveRDS(seurat.integrated, file = paste0(outdir,"human_intergration_sct.rds"))
 #worked this time 
 
+################################### Can start from here
+outdir <- '/home/jing/Phd_project/project_UCD_blca/blca_publication_OUTPUT/blca_publication_OUTPUT_sctransform/'
+seurat.integrated <- readRDS(paste0(outdir,"human_intergration_sct.rds"))
+
 corrected_UMI <- seurat.integrated[["SCT"]]$data
 corrected_UMI <-t(corrected_UMI)
 
-writeMM(corrected_UMI, paste0(outdir,"blca_scR_corrected_UMI.mtx"))
-write.table(rownames(corrected_UMI), file = paste0(outdir, "blca_scR_corrected_UMI_cells.txt"), col.names = FALSE, row.names = FALSE)
-write.table(colnames(corrected_UMI), file = paste0(outdir, "blca_scR_corrected_UMI_genes.txt"), col.names = FALSE, row.names = FALSE)
+# writeMM(corrected_UMI, paste0(outdir,"blca_scR_corrected_UMI.mtx"))
+# write.table(rownames(corrected_UMI), file = paste0(outdir, "blca_scR_corrected_UMI_cells.txt"), col.names = FALSE, row.names = FALSE)
+# write.table(colnames(corrected_UMI), file = paste0(outdir, "blca_scR_corrected_UMI_genes.txt"), col.names = FALSE, row.names = FALSE)
 
 #check gene row length. Might be mismatch. Version 1 or v2 might solve. 
 #One more thing 
@@ -97,7 +106,7 @@ write.table(colnames(corrected_UMI), file = paste0(outdir, "blca_scR_corrected_U
 seurat.integrated <- RunPCA(seurat.integrated, verbose = FALSE)
 seurat.integrated <- RunUMAP(seurat.integrated, reduction = "pca", dims = 1:30, verbose = FALSE)
 seurat.integrated <- FindNeighbors(seurat.integrated, reduction = "pca", dims = 1:30)
-seurat.integrated <- FindClusters(seurat.integrated, resolution = 0.3)
+seurat.integrated <- FindClusters(seurat.integrated, resolution = 0.05)
 
 
 DimPlot(seurat.integrated, reduction = "umap")
@@ -130,22 +139,25 @@ invasive_sig <- FindMarkers(seurat.integrated, assay = "SCT", ident.1 = "1_T2", 
 head(invasive_sig, n = 15)
 
 rownames(invasive_sig[invasive_sig$p_val_adj < 0.05, ])#6669
-
-#write.csv(invasive_sig,paste0(outdir,'invasive_sig.csv'))
+# invasive_sig <- invasive_sig[invasive_sig$p_val_adj < 0.05, ]
+# write.csv(invasive_sig,paste0(outdir,'invasive_sig.csv'))
 #Check overlap with LINCS genes 
 library(readxl)
-
 stv <- read_excel('/home/jing/Phd_project/project_GBM/gbm_OUTPUT/gbm_OUTPUT_LINCS/ALL_DATA_2020_Jing_gbm_del.xlsx',
-                  sheet = 'STVs')
+                  sheet = 'STVs') # Get Lincs genes list 
 common_lincs <- intersect(rownames(invasive_sig[invasive_sig$p_val_adj < 0.05, ]), stv$Gene) # 532
 
 
 #
 DefaultAssay(seurat.integrated) <-'SCT'
-FeaturePlot(seurat.integrated, features = c("CD36", "S100A8", "SPINK1"), split.by = "Stage", max.cutoff = 3,
+FeaturePlot(seurat.integrated, features = c("CDH1", "UPK1A",  "UPK1B", "UPK3A", "UPK3B", "SLC14A1",
+                                            "UPK2"), max.cutoff = 3,
             cols = c("grey", "red"))
 Idents(seurat.integrated) <- "leiden"
 
+p1 <- VlnPlot(seurat.integrated, features = c("CDH1", "IVL", "UPK1A", "UPK1B", "UPK3A", "UPK3B", "SLC14A1",
+                                              "UPK2"),
+              pt.size = 0.2, ncol = 4)
 cluster1 <- FindConservedMarkers(seurat.integrated, assay = "SCT", ident.1 = "1", grouping.var = "Stage",
                                    verbose = FALSE)
 head(cluster1)
@@ -157,3 +169,26 @@ wrap_plots(plots = plots, ncol = 1)
 cluster1 <- cluster1[cluster1$max_pval<0.05,]
 #write.csv(cluster1,paste0(outdir,'canonical_c1_sig.csv'))
 
+
+DefaultAssay(seurat.integrated) <-'RNA'
+
+p1 <- VlnPlot(seurat.integrated, features = c("CDH1", "IVL", "UPK1A", "UPK1B", "UPK3A", "UPK3B", "SLC14A1",
+                                              "UPK2"),
+              pt.size = 0.2, ncol = 4)
+
+VlnPlot(seurat.integrated, features = c("CDH1", "IVL", "UPK1A", "UPK1B", "UPK3A", "UPK3B", "SLC14A1","UPK2"),
+        pt.size = 0.2, ncol = 4)
+
+
+FeaturePlot(seurat.integrated, features = c("CDH1", "IVL", "UPK1A", "UPK1B", "UPK3A", "UPK3B", "SLC14A1","UPK2"), 
+            pt.size = 0.2,ncol = 3)
+p1
+
+Idents(seurat.integrated) <- 'seurat_clusters'
+cluster0 <- subset(seurat.integrated, idents='0')
+
+corrected_UMI_c0 <- cluster0[["SCT"]]$data
+corrected_UMI_c0 <-t(corrected_UMI_c0)
+writeMM(corrected_UMI_c0, paste0(outdir,"blca_scR_C0_corrected_UMI.mtx"))
+write.table(rownames(corrected_UMI_c0), file = paste0(outdir, "blca_scR_C0_corrected_UMI_cells.txt"), col.names = FALSE, row.names = FALSE)
+write.table(colnames(corrected_UMI_c0), file = paste0(outdir, "blca_scR_C0_corrected_UMI_genes.txt"), col.names = FALSE, row.names = FALSE)
