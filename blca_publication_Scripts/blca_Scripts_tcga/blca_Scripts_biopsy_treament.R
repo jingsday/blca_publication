@@ -1,3 +1,8 @@
+library(survival)
+library(survminer)
+library(dplyr)
+library(ggplot2)
+library(stringr)
 
 setwd("/home/jing/Phd_project/project_UCD_blca/blca_DATA/blca_DATA_tcga_pan_can_atlas_2018/blca_DATA_tcga_pan_can_atlas_2018")
 
@@ -19,11 +24,11 @@ rownames(RNA_raw) <- RNA_raw$Hugo_Symbol
 RNA <- as.data.frame(t(RNA_raw[-1:-2]))
 
 #retrieve RNAs of interest
-RNA <- RNA[str_sub(row.names(RNA), end = -4) %in% row.names(clin), ]
 
 clin <- clin_raw[str_sub(row.names(RNA), end = -4),]
 clin <- clin[!is.na(clin$OS_MONTHS) & !is.na(clin$OS_STATUS), ]
 
+RNA <- RNA[str_sub(row.names(RNA), end = -4) %in% row.names(clin), ]
 
 # create a survival object consisting of times & censoring
 surv_obj <- Surv(time = clin$OS_MONTHS, 

@@ -1,0 +1,664 @@
+gene_symbol,gene_id,ensembl_id,gene_title,gene_type,src,feature_space
+ABCA6,23460.0,ENSG00000154262,ATP binding cassette subfamily A member 6,protein-coding,NCBI,best inferred
+ABCA8,10351.0,ENSG00000141338,ATP binding cassette subfamily A member 8,protein-coding,NCBI,best inferred
+ACOX3,8310.0,ENSG00000087008,"acyl-CoA oxidase 3, pristanoyl",protein-coding,NCBI,best inferred
+ACTC1,70.0,ENSG00000159251,actin alpha cardiac muscle 1,protein-coding,NCBI,best inferred
+ACVR2B-AS1,100128640.0,ENSG00000229589,ACVR2B antisense RNA 1,ncRNA,NCBI,best inferred
+ADAM12,8038.0,ENSG00000148848,ADAM metallopeptidase domain 12,protein-coding,NCBI,best inferred
+ADAR,103.0,ENSG00000160710,adenosine deaminase RNA specific,protein-coding,NCBI,best inferred
+ADM,133.0,ENSG00000148926,adrenomedullin,protein-coding,NCBI,best inferred
+ADORA1,134.0,ENSG00000163485,adenosine A1 receptor,protein-coding,NCBI,best inferred
+AEBP1,165.0,ENSG00000106624,AE binding protein 1,protein-coding,NCBI,best inferred
+AEN,64782.0,ENSG00000181026,apoptosis enhancing nuclease,protein-coding,NCBI,best inferred
+AK1,203.0,ENSG00000106992,adenylate kinase 1,protein-coding,NCBI,best inferred
+AK4,205.0,ENSG00000162433,adenylate kinase 4,protein-coding,NCBI,best inferred
+AK5,26289.0,ENSG00000154027,adenylate kinase 5,protein-coding,NCBI,best inferred
+AKR1B1,231.0,ENSG00000085662,aldo-keto reductase family 1 member B,protein-coding,NCBI,best inferred
+AKR1B10,57016.0,ENSG00000198074,aldo-keto reductase family 1 member B10,protein-coding,NCBI,best inferred
+ALDH1A1,216.0,ENSG00000165092,aldehyde dehydrogenase 1 family member A1,protein-coding,NCBI,best inferred
+ALDOA,226.0,ENSG00000149925,"aldolase, fructose-bisphosphate A",protein-coding,NCBI,landmark
+ALDOC,230.0,ENSG00000109107,"aldolase, fructose-bisphosphate C",protein-coding,NCBI,landmark
+ANGPTL4,51129.0,ENSG00000167772,angiopoietin like 4,protein-coding,NCBI,best inferred
+ANKLE2,23141.0,ENSG00000176915,ankyrin repeat and LEM domain containing 2,protein-coding,NCBI,best inferred
+ANKRA2,57763.0,ENSG00000164331,ankyrin repeat family A member 2,protein-coding,NCBI,best inferred
+ANKZF1,55139.0,ENSG00000163516,ankyrin repeat and zinc finger domain containing 1,protein-coding,NCBI,best inferred
+APBA3,9546.0,ENSG00000011132,amyloid beta precursor protein binding family A member 3,protein-coding,NCBI,best inferred
+APOBEC3G,60489.0,ENSG00000239713,apolipoprotein B mRNA editing enzyme catalytic subunit 3G,protein-coding,NCBI,best inferred
+APOC1,341.0,ENSG00000130208,apolipoprotein C1,protein-coding,NCBI,best inferred
+APOL1,8542.0,ENSG00000100342,apolipoprotein L1,protein-coding,NCBI,best inferred
+APOL2,23780.0,ENSG00000128335,apolipoprotein L2,protein-coding,NCBI,best inferred
+APOL3,80833.0,ENSG00000128284,apolipoprotein L3,protein-coding,NCBI,best inferred
+APOL6,80830.0,ENSG00000221963,apolipoprotein L6,protein-coding,NCBI,best inferred
+AREG,374.0,ENSG00000109321,amphiregulin,protein-coding,NCBI,best inferred
+ARHGAP11A,9824.0,ENSG00000198826,Rho GTPase activating protein 11A,protein-coding,NCBI,best inferred
+ARHGEF17,9828.0,ENSG00000110237,Rho guanine nucleotide exchange factor 17,protein-coding,NCBI,best inferred
+ARSJ,79642.0,ENSG00000180801,arylsulfatase family member J,protein-coding,NCBI,best inferred
+ART4,420.0,ENSG00000111339,ADP-ribosyltransferase 4 (Dombrock blood group),protein-coding,NCBI,best inferred
+ASB8,140461.0,ENSG00000177981,ankyrin repeat and SOCS box containing 8,protein-coding,NCBI,best inferred
+ATG2B,55102.0,ENSG00000066739,autophagy related 2B,protein-coding,NCBI,best inferred
+ATP10A,57194.0,ENSG00000206190,ATPase phospholipid transporting 10A (putative),protein-coding,NCBI,best inferred
+B4GALT1,2683.0,ENSG00000086062,"beta-1,4-galactosyltransferase 1",protein-coding,NCBI,best inferred
+BAAT,570.0,ENSG00000136881,bile acid-CoA:amino acid N-acyltransferase,protein-coding,NCBI,best inferred
+BACH2,60468.0,ENSG00000112182,BTB domain and CNC homolog 2,protein-coding,NCBI,best inferred
+BBIP1,92482.0,ENSG00000214413,BBSome interacting protein 1,protein-coding,NCBI,best inferred
+BCAR3,8412.0,ENSG00000137936,"BCAR3 adaptor protein, NSP family member",protein-coding,NCBI,best inferred
+BCKDK,10295.0,ENSG00000103507,branched chain ketoacid dehydrogenase kinase,protein-coding,NCBI,best inferred
+BCL2A1,597.0,ENSG00000140379,BCL2 related protein A1,protein-coding,NCBI,best inferred
+BCOR,54880.0,ENSG00000183337,BCL6 corepressor,protein-coding,NCBI,best inferred
+BDH2,56898.0,ENSG00000164039,3-hydroxybutyrate dehydrogenase 2,protein-coding,NCBI,best inferred
+BEGAIN,57596.0,ENSG00000183092,brain enriched guanylate kinase associated,protein-coding,NCBI,best inferred
+BGN,633.0,ENSG00000182492,biglycan,protein-coding,NCBI,best inferred
+BHLHE40,8553.0,ENSG00000134107,basic helix-loop-helix family member e40,protein-coding,NCBI,landmark
+BID,637.0,ENSG00000015475,BH3 interacting domain death agonist,protein-coding,NCBI,landmark
+BIRC2,329.0,ENSG00000110330,baculoviral IAP repeat containing 2,protein-coding,NCBI,landmark
+BIRC3,330.0,ENSG00000023445,baculoviral IAP repeat containing 3,protein-coding,NCBI,best inferred
+BMP2,650.0,ENSG00000125845,bone morphogenetic protein 2,protein-coding,NCBI,best inferred
+BMPR2,659.0,ENSG00000204217,bone morphogenetic protein receptor type 2,protein-coding,NCBI,best inferred
+BNIP3,664.0,ENSG00000176171,BCL2 interacting protein 3,protein-coding,NCBI,landmark
+BNIP3L,665.0,ENSG00000104765,BCL2 interacting protein 3 like,protein-coding,NCBI,landmark
+BRIX1,55299.0,ENSG00000113460,biogenesis of ribosomes BRX1,protein-coding,NCBI,best inferred
+BSDC1,55108.0,ENSG00000160058,BSD domain containing 1,protein-coding,NCBI,best inferred
+BST2,684.0,ENSG00000130303,bone marrow stromal cell antigen 2,protein-coding,NCBI,best inferred
+BZW1,9689.0,ENSG00000082153,basic leucine zipper and W2 domains 1,protein-coding,NCBI,best inferred
+C19orf66,55337.0,ENSG00000130813,chromosome 19 open reading frame 66,protein-coding,NCBI,best inferred
+C1QTNF1,114897.0,ENSG00000173918,C1q and TNF related 1,protein-coding,NCBI,best inferred
+C2CD5,9847.0,ENSG00000111731,C2 calcium dependent domain containing 5,protein-coding,NCBI,landmark
+C3,718.0,ENSG00000125730,complement C3,protein-coding,NCBI,best inferred
+CA14,23632.0,ENSG00000118298,carbonic anhydrase 14,protein-coding,NCBI,best inferred
+CA9,768.0,ENSG00000107159,carbonic anhydrase 9,protein-coding,NCBI,best inferred
+CABYR,26256.0,ENSG00000154040,calcium binding tyrosine phosphorylation regulated,protein-coding,NCBI,best inferred
+CALD1,800.0,ENSG00000122786,caldesmon 1,protein-coding,NCBI,best inferred
+CAMK4,814.0,ENSG00000152495,calcium/calmodulin dependent protein kinase IV,protein-coding,NCBI,best inferred
+CAMLG,819.0,ENSG00000164615,calcium modulating ligand,protein-coding,NCBI,best inferred
+CARF,79800.0,ENSG00000138380,calcium responsive transcription factor,protein-coding,NCBI,best inferred
+CASP4,837.0,ENSG00000196954,caspase 4,protein-coding,NCBI,best inferred
+CBFA2T3,863.0,ENSG00000129993,CBFA2/RUNX1 translocation partner 3,protein-coding,NCBI,best inferred
+CBFB,865.0,ENSG00000067955,core-binding factor subunit beta,protein-coding,NCBI,best inferred
+CBX7,23492.0,ENSG00000100307,chromobox 7,protein-coding,NCBI,best inferred
+CCDC25,55246.0,ENSG00000147419,coiled-coil domain containing 25,protein-coding,NCBI,best inferred
+CCDC28A,25901.0,ENSG00000024862,coiled-coil domain containing 28A,protein-coding,NCBI,best inferred
+CCDC81,60494.0,ENSG00000149201,coiled-coil domain containing 81,protein-coding,NCBI,best inferred
+CCDC90B,60492.0,ENSG00000137500,coiled-coil domain containing 90B,protein-coding,NCBI,best inferred
+CCL2,6347.0,ENSG00000108691,C-C motif chemokine ligand 2,protein-coding,NCBI,landmark
+CCL20,6364.0,ENSG00000115009,C-C motif chemokine ligand 20,protein-coding,NCBI,best inferred
+CCND1,595.0,ENSG00000110092,cyclin D1,protein-coding,NCBI,landmark
+CCNG2,901.0,ENSG00000138764,cyclin G2,protein-coding,NCBI,best inferred
+CD1A,909.0,ENSG00000158477,CD1a molecule,protein-coding,NCBI,best inferred
+CD40,958.0,ENSG00000101017,CD40 molecule,protein-coding,NCBI,landmark
+CD72,971.0,ENSG00000137101,CD72 molecule,protein-coding,NCBI,best inferred
+CD83,9308.0,ENSG00000112149,CD83 molecule,protein-coding,NCBI,best inferred
+CD93,22918.0,ENSG00000125810,CD93 molecule,protein-coding,NCBI,best inferred
+CDC37L1,55664.0,ENSG00000106993,cell division cycle 37 like 1,protein-coding,NCBI,best inferred
+CDCA4,55038.0,ENSG00000170779,cell division cycle associated 4,protein-coding,NCBI,landmark
+CDH2,1000.0,ENSG00000170558,cadherin 2,protein-coding,NCBI,best inferred
+CDIP1,29965.0,ENSG00000089486,cell death inducing p53 target 1,protein-coding,NCBI,best inferred
+CDK5RAP3,80279.0,ENSG00000108465,CDK5 regulatory subunit associated protein 3,protein-coding,NCBI,best inferred
+CDKN1A,1026.0,ENSG00000124762,cyclin dependent kinase inhibitor 1A,protein-coding,NCBI,landmark
+CDKN2B,1030.0,ENSG00000147883,cyclin dependent kinase inhibitor 2B,protein-coding,NCBI,best inferred
+CEPT1,10390.0,ENSG00000134255,choline/ethanolamine phosphotransferase 1,protein-coding,NCBI,best inferred
+CES2,8824.0,ENSG00000172831,carboxylesterase 2,protein-coding,NCBI,best inferred
+CFB,629.0,ENSG00000243649,complement factor B,protein-coding,NCBI,best inferred
+CFLAR,8837.0,ENSG00000003402,CASP8 and FADD like apoptosis regulator,protein-coding,NCBI,landmark
+CHRNA10,57053.0,ENSG00000129749,cholinergic receptor nicotinic alpha 10 subunit,protein-coding,NCBI,best inferred
+CHST3,9469.0,ENSG00000122863,carbohydrate sulfotransferase 3,protein-coding,NCBI,best inferred
+CILP,8483.0,ENSG00000138615,cartilage intermediate layer protein,protein-coding,NCBI,best inferred
+CIR1,9541.0,ENSG00000138433,"corepressor interacting with RBPJ, 1",protein-coding,NCBI,best inferred
+CLCA2,9635.0,ENSG00000137975,chloride channel accessory 2,protein-coding,NCBI,best inferred
+CLDN1,9076.0,ENSG00000163347,claudin 1,protein-coding,NCBI,best inferred
+CLDN11,5010.0,ENSG00000013297,claudin 11,protein-coding,NCBI,best inferred
+CLDN8,9073.0,ENSG00000156284,claudin 8,protein-coding,NCBI,best inferred
+CLK3,1198.0,ENSG00000179335,CDC like kinase 3,protein-coding,NCBI,best inferred
+CLUHP3,100132341.0,ENSG00000131797,clustered mitochondria homolog pseudogene 3,pseudo,NCBI,best inferred
+CMTR1,23070.0,ENSG00000137200,cap methyltransferase 1,protein-coding,NCBI,best inferred
+CNN1,1264.0,ENSG00000130176,calponin 1,protein-coding,NCBI,best inferred
+CNP,1267.0,ENSG00000173786,"2',3'-cyclic nucleotide 3' phosphodiesterase",protein-coding,NCBI,best inferred
+CNR1,1268.0,ENSG00000118432,cannabinoid receptor 1,protein-coding,NCBI,best inferred
+COL1A1,1277.0,ENSG00000108821,collagen type I alpha 1 chain,protein-coding,NCBI,landmark
+COL4A1,1282.0,ENSG00000187498,collagen type IV alpha 1 chain,protein-coding,NCBI,landmark
+COL4A2,1284.0,ENSG00000134871,collagen type IV alpha 2 chain,protein-coding,NCBI,best inferred
+COL5A1,1289.0,ENSG00000130635,collagen type V alpha 1 chain,protein-coding,NCBI,best inferred
+COMP,1311.0,ENSG00000105664,cartilage oligomeric matrix protein,protein-coding,NCBI,best inferred
+COQ8A,56997.0,ENSG00000163050,coenzyme Q8A,protein-coding,NCBI,landmark
+CRIPT,9419.0,ENSG00000119878,CXXC repeat containing interactor of PDZ3 domain,protein-coding,NCBI,best inferred
+CRKL,1399.0,ENSG00000099942,"CRK like proto-oncogene, adaptor protein",protein-coding,NCBI,landmark
+CRLF1,9244.0,ENSG00000006016,cytokine receptor like factor 1,protein-coding,NCBI,best inferred
+CRYL1,51084.0,ENSG00000165475,crystallin lambda 1,protein-coding,NCBI,best inferred
+CRYM,1428.0,ENSG00000103316,crystallin mu,protein-coding,NCBI,best inferred
+CSF2,1437.0,ENSG00000164400,colony stimulating factor 2,protein-coding,NCBI,best inferred
+CSF3,1440.0,ENSG00000108342,colony stimulating factor 3,protein-coding,NCBI,best inferred
+CST7,8530.0,ENSG00000077984,cystatin F,protein-coding,NCBI,best inferred
+CSTA,1475.0,ENSG00000121552,cystatin A,protein-coding,NCBI,best inferred
+CTDSP1,58190.0,ENSG00000144579,CTD small phosphatase 1,protein-coding,NCBI,best inferred
+CTSF,8722.0,ENSG00000174080,cathepsin F,protein-coding,NCBI,best inferred
+CTSS,1520.0,ENSG00000163131,cathepsin S,protein-coding,NCBI,best inferred
+CXCL1,2919.0,ENSG00000163739,C-X-C motif chemokine ligand 1,protein-coding,NCBI,best inferred
+CXCL2,2920.0,ENSG00000081041,C-X-C motif chemokine ligand 2,protein-coding,NCBI,landmark
+CXCL3,2921.0,ENSG00000163734,C-X-C motif chemokine ligand 3,protein-coding,NCBI,best inferred
+CXCL5,6374.0,ENSG00000163735,C-X-C motif chemokine ligand 5,protein-coding,NCBI,best inferred
+CXCL6,6372.0,ENSG00000124875,C-X-C motif chemokine ligand 6,protein-coding,NCBI,best inferred
+CXCL8,3576.0,ENSG00000169429,C-X-C motif chemokine ligand 8,protein-coding,NCBI,best inferred
+CXorf56,63932.0,ENSG00000018610,chromosome X open reading frame 56,protein-coding,NCBI,best inferred
+CYFIP2,26999.0,ENSG00000055163,cytoplasmic FMR1 interacting protein 2,protein-coding,NCBI,best inferred
+CYLD,1540.0,ENSG00000083799,CYLD lysine 63 deubiquitinase,protein-coding,NCBI,best inferred
+CYP2J2,1573.0,ENSG00000134716,cytochrome P450 family 2 subfamily J member 2,protein-coding,NCBI,best inferred
+DACT1,51339.0,ENSG00000165617,dishevelled binding antagonist of beta catenin 1,protein-coding,NCBI,best inferred
+DARS,1615.0,ENSG00000115866,aspartyl-tRNA synthetase,protein-coding,NCBI,best inferred
+DAZAP2,9802.0,ENSG00000183283,DAZ associated protein 2,protein-coding,NCBI,best inferred
+DCBLD2,131566.0,ENSG00000057019,"discoidin, CUB and LCCL domain containing 2",protein-coding,NCBI,best inferred
+DDB2,1643.0,ENSG00000134574,damage specific DNA binding protein 2,protein-coding,NCBI,landmark
+DDX19A,55308.0,ENSG00000168872,DEAD-box helicase 19A,protein-coding,NCBI,best inferred
+DDX58,23586.0,ENSG00000107201,DExD/H-box helicase 58,protein-coding,NCBI,best inferred
+DDX60,55601.0,ENSG00000137628,DExD/H-box helicase 60,protein-coding,NCBI,best inferred
+DGKA,1606.0,ENSG00000065357,diacylglycerol kinase alpha,protein-coding,NCBI,best inferred
+DGKI,9162.0,ENSG00000157680,diacylglycerol kinase iota,protein-coding,NCBI,best inferred
+DHRS12,79758.0,ENSG00000102796,dehydrogenase/reductase 12,protein-coding,NCBI,best inferred
+DHX58,79132.0,ENSG00000108771,DExH-box helicase 58,protein-coding,NCBI,best inferred
+DNAL4,10126.0,ENSG00000100246,dynein axonemal light chain 4,protein-coding,NCBI,best inferred
+DNASE2,1777.0,ENSG00000105612,"deoxyribonuclease 2, lysosomal",protein-coding,NCBI,best inferred
+DOLK,22845.0,ENSG00000175283,dolichol kinase,protein-coding,NCBI,best inferred
+DRAM1,55332.0,ENSG00000136048,DNA damage regulated autophagy modulator 1,protein-coding,NCBI,best inferred
+DTX2,113878.0,ENSG00000091073,deltex E3 ubiquitin ligase 2,protein-coding,NCBI,best inferred
+DUSP4,1846.0,ENSG00000120875,dual specificity phosphatase 4,protein-coding,NCBI,landmark
+DUSP5,1847.0,ENSG00000138166,dual specificity phosphatase 5,protein-coding,NCBI,best inferred
+DUSP6,1848.0,ENSG00000139318,dual specificity phosphatase 6,protein-coding,NCBI,landmark
+DUSP7,1849.0,ENSG00000164086,dual specificity phosphatase 7,protein-coding,NCBI,best inferred
+DYNC2LI1,51626.0,ENSG00000138036,dynein cytoplasmic 2 light intermediate chain 1,protein-coding,NCBI,best inferred
+E2F3,1871.0,ENSG00000112242,E2F transcription factor 3,protein-coding,NCBI,best inferred
+EAPP,55837.0,ENSG00000129518,E2F associated phosphoprotein,protein-coding,NCBI,landmark
+EBI3,10148.0,ENSG00000105246,Epstein-Barr virus induced 3,protein-coding,NCBI,best inferred
+ECH1,1891.0,ENSG00000104823,enoyl-CoA hydratase 1,protein-coding,NCBI,landmark
+EDN1,1906.0,ENSG00000078401,endothelin 1,protein-coding,NCBI,landmark
+EFHC1,114327.0,ENSG00000096093,EF-hand domain containing 1,protein-coding,NCBI,best inferred
+EFNA1,1942.0,ENSG00000169242,ephrin A1,protein-coding,NCBI,best inferred
+EFNA3,1944.0,ENSG00000143590,ephrin A3,protein-coding,NCBI,best inferred
+EFNB1,1947.0,ENSG00000090776,ephrin B1,protein-coding,NCBI,best inferred
+EFR3B,22979.0,ENSG00000084710,EFR3 homolog B,protein-coding,NCBI,best inferred
+EGLN1,54583.0,ENSG00000135766,egl-9 family hypoxia inducible factor 1,protein-coding,NCBI,best inferred
+EGLN3,112399.0,ENSG00000129521,egl-9 family hypoxia inducible factor 3,protein-coding,NCBI,best inferred
+EGR3,1960.0,ENSG00000179388,early growth response 3,protein-coding,NCBI,best inferred
+EGR4,1961.0,ENSG00000135625,early growth response 4,protein-coding,NCBI,best inferred
+EHD1,10938.0,ENSG00000110047,EH domain containing 1,protein-coding,NCBI,best inferred
+EI24,9538.0,ENSG00000149547,EI24 autophagy associated transmembrane protein,protein-coding,NCBI,best inferred
+EIF2AK2,5610.0,ENSG00000055332,eukaryotic translation initiation factor 2 alpha kinase 2,protein-coding,NCBI,best inferred
+ELF2,1998.0,ENSG00000109381,E74 like ETS transcription factor 2,protein-coding,NCBI,best inferred
+ELK3,2004.0,ENSG00000111145,ETS transcription factor ELK3,protein-coding,NCBI,best inferred
+ENO1,2023.0,ENSG00000074800,enolase 1,protein-coding,NCBI,best inferred
+ENO2,2026.0,ENSG00000111674,enolase 2,protein-coding,NCBI,best inferred
+EPHA2,1969.0,ENSG00000142627,EPH receptor A2,protein-coding,NCBI,best inferred
+EPHA3,2042.0,ENSG00000044524,EPH receptor A3,protein-coding,NCBI,landmark
+EPN2,22905.0,ENSG00000072134,epsin 2,protein-coding,NCBI,landmark
+ERO1A,30001.0,ENSG00000197930,endoplasmic reticulum oxidoreductase 1 alpha,protein-coding,NCBI,landmark
+ETFDH,2110.0,ENSG00000171503,electron transfer flavoprotein dehydrogenase,protein-coding,NCBI,best inferred
+ETS1,2113.0,ENSG00000134954,"ETS proto-oncogene 1, transcription factor",protein-coding,NCBI,landmark
+ETV1,2115.0,ENSG00000006468,ETS variant 1,protein-coding,NCBI,landmark
+ETV4,2118.0,ENSG00000175832,ETS variant 4,protein-coding,NCBI,best inferred
+ETV5,2119.0,ENSG00000244405,ETS variant 5,protein-coding,NCBI,best inferred
+ETV7,51513.0,ENSG00000010030,ETS variant 7,protein-coding,NCBI,best inferred
+FAM13A,10144.0,ENSG00000138640,family with sequence similarity 13 member A,protein-coding,NCBI,best inferred
+FAM149B1,317662.0,ENSG00000138286,family with sequence similarity 149 member B1,protein-coding,NCBI,best inferred
+FAM162A,26355.0,ENSG00000114023,family with sequence similarity 162 member A,protein-coding,NCBI,best inferred
+FAS,355.0,ENSG00000026103,Fas cell surface death receptor,protein-coding,NCBI,landmark
+FAXDC2,10826.0,ENSG00000170271,fatty acid hydroxylase domain containing 2,protein-coding,NCBI,best inferred
+FBLN5,10516.0,ENSG00000140092,fibulin 5,protein-coding,NCBI,best inferred
+FBXO22,26263.0,ENSG00000167196,F-box protein 22,protein-coding,NCBI,best inferred
+FBXO42,54455.0,ENSG00000037637,F-box protein 42,protein-coding,NCBI,best inferred
+FBXW7,55294.0,ENSG00000109670,F-box and WD repeat domain containing 7,protein-coding,NCBI,best inferred
+FCGRT,2217.0,ENSG00000104870,Fc fragment of IgG receptor and transporter,protein-coding,NCBI,best inferred
+FCMR,9214.0,ENSG00000162894,Fc fragment of IgM receptor,protein-coding,NCBI,best inferred
+FDXR,2232.0,ENSG00000161513,ferredoxin reductase,protein-coding,NCBI,best inferred
+FERMT1,55612.0,ENSG00000101311,fermitin family member 1,protein-coding,NCBI,best inferred
+FHIT,2272.0,ENSG00000189283,fragile histidine triad,protein-coding,NCBI,best inferred
+FLAD1,80308.0,ENSG00000160688,flavin adenine dinucleotide synthetase 1,protein-coding,NCBI,best inferred
+FLCN,201163.0,ENSG00000154803,folliculin,protein-coding,NCBI,best inferred
+FMO5,2330.0,ENSG00000131781,flavin containing monooxygenase 5,protein-coding,NCBI,best inferred
+FOSL1,8061.0,ENSG00000175592,"FOS like 1, AP-1 transcription factor subunit",protein-coding,NCBI,landmark
+FOXN3,1112.0,ENSG00000053254,forkhead box N3,protein-coding,NCBI,best inferred
+FRMPD1,22844.0,ENSG00000070601,FERM and PDZ domain containing 1,protein-coding,NCBI,best inferred
+FSTL3,10272.0,ENSG00000070404,follistatin like 3,protein-coding,NCBI,best inferred
+GAA,2548.0,ENSG00000171298,"glucosidase alpha, acid",protein-coding,NCBI,landmark
+GALNT10,55568.0,ENSG00000164574,polypeptide N-acetylgalactosaminyltransferase 10,protein-coding,NCBI,best inferred
+GAPDH,2597.0,ENSG00000111640,glyceraldehyde-3-phosphate dehydrogenase,protein-coding,NCBI,landmark
+GATAD2A,54815.0,ENSG00000167491,GATA zinc finger domain containing 2A,protein-coding,NCBI,best inferred
+GBE1,2632.0,ENSG00000114480,"1,4-alpha-glucan branching enzyme 1",protein-coding,NCBI,best inferred
+GBP1,2633.0,ENSG00000117228,guanylate binding protein 1,protein-coding,NCBI,best inferred
+GCH1,2643.0,ENSG00000131979,GTP cyclohydrolase 1,protein-coding,NCBI,best inferred
+GDF15,9518.0,ENSG00000130513,growth differentiation factor 15,protein-coding,NCBI,best inferred
+GLS2,27165.0,ENSG00000135423,glutaminase 2,protein-coding,NCBI,best inferred
+GNL3L,54552.0,ENSG00000130119,G protein nucleolar 3 like,protein-coding,NCBI,best inferred
+GOLPH3L,55204.0,ENSG00000143457,golgi phosphoprotein 3 like,protein-coding,NCBI,best inferred
+GP5,2814.0,ENSG00000178732,glycoprotein V platelet,protein-coding,NCBI,best inferred
+GPI,2821.0,ENSG00000105220,glucose-6-phosphate isomerase,protein-coding,NCBI,best inferred
+GPR176,11245.0,ENSG00000166073,G protein-coupled receptor 176,protein-coding,NCBI,best inferred
+GPR3,2827.0,ENSG00000181773,G protein-coupled receptor 3,protein-coding,NCBI,best inferred
+GPR87,53836.0,ENSG00000138271,G protein-coupled receptor 87,protein-coding,NCBI,best inferred
+GRAMD1C,54762.0,ENSG00000178075,GRAM domain containing 1C,protein-coding,NCBI,best inferred
+GRIA3,2892.0,ENSG00000125675,glutamate ionotropic receptor AMPA type subunit 3,protein-coding,NCBI,best inferred
+GRIN2C,2905.0,ENSG00000161509,glutamate ionotropic receptor NMDA type subunit 2C,protein-coding,NCBI,best inferred
+GRPEL1,80273.0,ENSG00000109519,"GrpE like 1, mitochondrial",protein-coding,NCBI,best inferred
+GSAP,54103.0,ENSG00000186088,gamma-secretase activating protein,protein-coding,NCBI,best inferred
+GYS1,2997.0,ENSG00000104812,glycogen synthase 1,protein-coding,NCBI,best inferred
+HERC5,51191.0,ENSG00000138646,HECT and RLD domain containing E3 ubiquitin protein ligase 5,protein-coding,NCBI,best inferred
+HERC6,55008.0,ENSG00000138642,HECT and RLD domain containing E3 ubiquitin protein ligase family member 6,protein-coding,NCBI,landmark
+HILPDA,29923.0,ENSG00000135245,hypoxia inducible lipid droplet associated,protein-coding,NCBI,best inferred
+HIVEP1,3096.0,ENSG00000095951,human immunodeficiency virus type I enhancer binding protein 1,protein-coding,NCBI,best inferred
+HIVEP2,3097.0,ENSG00000010818,human immunodeficiency virus type I enhancer binding protein 2,protein-coding,NCBI,best inferred
+HMGA1,3159.0,ENSG00000137309,high mobility group AT-hook 1,protein-coding,NCBI,best inferred
+HMGA2,8091.0,ENSG00000149948,high mobility group AT-hook 2,protein-coding,NCBI,landmark
+HMOX2,3163.0,ENSG00000103415,heme oxygenase 2,protein-coding,NCBI,best inferred
+HSD17B6,8630.0,ENSG00000025423,hydroxysteroid 17-beta dehydrogenase 6,protein-coding,NCBI,best inferred
+HSD17B8,7923.0,ENSG00000204228,hydroxysteroid 17-beta dehydrogenase 8,protein-coding,NCBI,best inferred
+ICAM1,3383.0,ENSG00000090339,intercellular adhesion molecule 1,protein-coding,NCBI,landmark
+ID1,3397.0,ENSG00000125968,"inhibitor of DNA binding 1, HLH protein",protein-coding,NCBI,best inferred
+ID3,3399.0,ENSG00000117318,"inhibitor of DNA binding 3, HLH protein",protein-coding,NCBI,best inferred
+ID4,3400.0,ENSG00000172201,"inhibitor of DNA binding 4, HLH protein",protein-coding,NCBI,best inferred
+IFI16,3428.0,ENSG00000163565,interferon gamma inducible protein 16,protein-coding,NCBI,best inferred
+IFI27,3429.0,ENSG00000165949,interferon alpha inducible protein 27,protein-coding,NCBI,best inferred
+IFI35,3430.0,ENSG00000068079,interferon induced protein 35,protein-coding,NCBI,best inferred
+IFI44,10561.0,ENSG00000137965,interferon induced protein 44,protein-coding,NCBI,best inferred
+IFI44L,10964.0,ENSG00000137959,interferon induced protein 44 like,protein-coding,NCBI,best inferred
+IFI6,2537.0,ENSG00000126709,interferon alpha inducible protein 6,protein-coding,NCBI,best inferred
+IFIH1,64135.0,ENSG00000115267,interferon induced with helicase C domain 1,protein-coding,NCBI,best inferred
+IFIT1,3434.0,ENSG00000185745,interferon induced protein with tetratricopeptide repeats 1,protein-coding,NCBI,best inferred
+IFIT2,3433.0,ENSG00000119922,interferon induced protein with tetratricopeptide repeats 2,protein-coding,NCBI,best inferred
+IFIT3,3437.0,ENSG00000119917,interferon induced protein with tetratricopeptide repeats 3,protein-coding,NCBI,best inferred
+IFIT5,24138.0,ENSG00000152778,interferon induced protein with tetratricopeptide repeats 5,protein-coding,NCBI,best inferred
+IFITM1,8519.0,ENSG00000185885,interferon induced transmembrane protein 1,protein-coding,NCBI,best inferred
+IFNAR2,3455.0,ENSG00000159110,interferon alpha and beta receptor subunit 2,protein-coding,NCBI,best inferred
+IFNGR2,3460.0,ENSG00000159128,interferon gamma receptor 2,protein-coding,NCBI,best inferred
+IKBKE,9641.0,ENSG00000263528,inhibitor of nuclear factor kappa B kinase subunit epsilon,protein-coding,NCBI,landmark
+IKZF3,22806.0,ENSG00000161405,IKAROS family zinc finger 3,protein-coding,NCBI,best inferred
+IL11,3589.0,ENSG00000095752,interleukin 11,protein-coding,NCBI,best inferred
+IL15,3600.0,ENSG00000164136,interleukin 15,protein-coding,NCBI,best inferred
+IL1A,3552.0,ENSG00000115008,interleukin 1 alpha,protein-coding,NCBI,best inferred
+IL1B,3553.0,ENSG00000125538,interleukin 1 beta,protein-coding,NCBI,landmark
+IL1RN,3557.0,ENSG00000136689,interleukin 1 receptor antagonist,protein-coding,NCBI,best inferred
+IL23A,51561.0,ENSG00000110944,interleukin 23 subunit alpha,protein-coding,NCBI,best inferred
+IL32,9235.0,ENSG00000008517,interleukin 32,protein-coding,NCBI,best inferred
+IL36G,56300.0,ENSG00000136688,interleukin 36 gamma,protein-coding,NCBI,best inferred
+IL6,3569.0,ENSG00000136244,interleukin 6,protein-coding,NCBI,best inferred
+IL7R,3575.0,ENSG00000168685,interleukin 7 receptor,protein-coding,NCBI,best inferred
+ING4,51147.0,ENSG00000111653,inhibitor of growth family member 4,protein-coding,NCBI,best inferred
+INHBA,3624.0,ENSG00000122641,inhibin subunit beta A,protein-coding,NCBI,best inferred
+INPP1,3628.0,ENSG00000151689,inositol polyphosphate-1-phosphatase,protein-coding,NCBI,landmark
+INPP5K,51763.0,ENSG00000132376,inositol polyphosphate-5-phosphatase K,protein-coding,NCBI,best inferred
+INSIG2,51141.0,ENSG00000125629,insulin induced gene 2,protein-coding,NCBI,best inferred
+IRF1,3659.0,ENSG00000125347,interferon regulatory factor 1,protein-coding,NCBI,best inferred
+IRF7,3665.0,ENSG00000185507,interferon regulatory factor 7,protein-coding,NCBI,best inferred
+IRF9,10379.0,ENSG00000213928,interferon regulatory factor 9,protein-coding,NCBI,best inferred
+ISCU,23479.0,ENSG00000136003,iron-sulfur cluster assembly enzyme,protein-coding,NCBI,best inferred
+ISG15,9636.0,ENSG00000187608,ISG15 ubiquitin like modifier,protein-coding,NCBI,best inferred
+JCHAIN,3512.0,ENSG00000132465,joining chain of multimeric IgA and IgM,protein-coding,NCBI,best inferred
+KANK3,256949.0,ENSG00000186994,KN motif and ankyrin repeat domains 3,protein-coding,NCBI,best inferred
+KCNA5,3741.0,ENSG00000130037,potassium voltage-gated channel subfamily A member 5,protein-coding,NCBI,best inferred
+KCNAB3,9196.0,ENSG00000170049,potassium voltage-gated channel subfamily A regulatory beta subunit 3,protein-coding,NCBI,best inferred
+KCNK10,54207.0,ENSG00000100433,potassium two pore domain channel subfamily K member 10,protein-coding,NCBI,best inferred
+KDM3A,55818.0,ENSG00000115548,lysine demethylase 3A,protein-coding,NCBI,landmark
+KDM4B,23030.0,ENSG00000127663,lysine demethylase 4B,protein-coding,NCBI,best inferred
+KDM4C,23081.0,ENSG00000107077,lysine demethylase 4C,protein-coding,NCBI,best inferred
+KLHDC2,23588.0,ENSG00000165516,kelch domain containing 2,protein-coding,NCBI,landmark
+KMO,8564.0,ENSG00000117009,kynurenine 3-monooxygenase,protein-coding,NCBI,best inferred
+KMT5A,387893.0,ENSG00000183955,lysine methyltransferase 5A,protein-coding,NCBI,best inferred
+KRR1,11103.0,ENSG00000111615,KRR1 small subunit processome component homolog,protein-coding,NCBI,best inferred
+KRT6B,3854.0,ENSG00000185479,keratin 6B,protein-coding,NCBI,best inferred
+KYNU,8942.0,ENSG00000115919,kynureninase,protein-coding,NCBI,best inferred
+LAMB2,3913.0,ENSG00000172037,laminin subunit beta 2,protein-coding,NCBI,best inferred
+LAMC2,3918.0,ENSG00000058085,laminin subunit gamma 2,protein-coding,NCBI,best inferred
+LAMP3,27074.0,ENSG00000078081,lysosomal associated membrane protein 3,protein-coding,NCBI,best inferred
+LAP3,51056.0,ENSG00000002549,leucine aminopeptidase 3,protein-coding,NCBI,landmark
+LARP7,51574.0,ENSG00000174720,La ribonucleoprotein domain family member 7,protein-coding,NCBI,best inferred
+LDHA,3939.0,ENSG00000134333,lactate dehydrogenase A,protein-coding,NCBI,best inferred
+LDLR,3949.0,ENSG00000130164,low density lipoprotein receptor,protein-coding,NCBI,best inferred
+LIMS2,55679.0,ENSG00000072163,LIM zinc finger domain containing 2,protein-coding,NCBI,best inferred
+LMCD1,29995.0,ENSG00000071282,LIM and cysteine rich domains 1,protein-coding,NCBI,best inferred
+LMO2,4005.0,ENSG00000135363,LIM domain only 2,protein-coding,NCBI,best inferred
+LOX,4015.0,ENSG00000113083,lysyl oxidase,protein-coding,NCBI,best inferred
+LOXL2,4017.0,ENSG00000134013,lysyl oxidase like 2,protein-coding,NCBI,best inferred
+LRMP,4033.0,ENSG00000118308,lymphoid restricted membrane protein,protein-coding,NCBI,best inferred
+LRP8,7804.0,ENSG00000157193,LDL receptor related protein 8,protein-coding,NCBI,best inferred
+LRRC15,131578.0,ENSG00000172061,leucine rich repeat containing 15,protein-coding,NCBI,best inferred
+LRRC23,10233.0,ENSG00000010626,leucine rich repeat containing 23,protein-coding,NCBI,best inferred
+LRRC32,2615.0,ENSG00000137507,leucine rich repeat containing 32,protein-coding,NCBI,best inferred
+LSM12,124801.0,ENSG00000161654,LSM12 homolog,protein-coding,NCBI,best inferred
+LTB,4050.0,ENSG00000227507,lymphotoxin beta,protein-coding,NCBI,best inferred
+LTBP2,4053.0,ENSG00000119681,latent transforming growth factor beta binding protein 2,protein-coding,NCBI,best inferred
+LZTFL1,54585.0,ENSG00000163818,leucine zipper transcription factor like 1,protein-coding,NCBI,best inferred
+MAN2B2,23324.0,ENSG00000013288,mannosidase alpha class 2B member 2,protein-coding,NCBI,best inferred
+MAP3K8,1326.0,ENSG00000107968,mitogen-activated protein kinase kinase kinase 8,protein-coding,NCBI,best inferred
+MAPK7,5598.0,ENSG00000166484,mitogen-activated protein kinase 7,protein-coding,NCBI,best inferred
+MARCKS,4082.0,ENSG00000277443,myristoylated alanine rich protein kinase C substrate,protein-coding,NCBI,best inferred
+MBTPS1,8720.0,ENSG00000140943,"membrane bound transcription factor peptidase, site 1",protein-coding,NCBI,landmark
+MCAM,4162.0,ENSG00000076706,melanoma cell adhesion molecule,protein-coding,NCBI,best inferred
+MCCC1,56922.0,ENSG00000078070,methylcrotonoyl-CoA carboxylase 1,protein-coding,NCBI,best inferred
+MCL1,4170.0,ENSG00000143384,"MCL1 apoptosis regulator, BCL2 family member",protein-coding,NCBI,best inferred
+MCMBP,79892.0,ENSG00000197771,minichromosome maintenance complex binding protein,protein-coding,NCBI,best inferred
+MDM2,4193.0,ENSG00000135679,MDM2 proto-oncogene,protein-coding,NCBI,best inferred
+MFAP4,4239.0,ENSG00000166482,microfibril associated protein 4,protein-coding,NCBI,best inferred
+MFGE8,4240.0,ENSG00000140545,milk fat globule-EGF factor 8 protein,protein-coding,NCBI,best inferred
+MGST3,4259.0,ENSG00000143198,microsomal glutathione S-transferase 3,protein-coding,NCBI,best inferred
+MIER2,54531.0,ENSG00000105556,MIER family member 2,protein-coding,NCBI,best inferred
+MLANA,2315.0,ENSG00000120215,melan-A,protein-coding,NCBI,best inferred
+MMP12,4321.0,ENSG00000262406,matrix metallopeptidase 12,protein-coding,NCBI,best inferred
+MMP9,4318.0,ENSG00000100985,matrix metallopeptidase 9,protein-coding,NCBI,best inferred
+MPI,4351.0,ENSG00000178802,mannose phosphate isomerase,protein-coding,NCBI,best inferred
+MPP6,51678.0,ENSG00000105926,membrane palmitoylated protein 6,protein-coding,NCBI,best inferred
+MRAS,22808.0,ENSG00000158186,muscle RAS oncogene homolog,protein-coding,NCBI,best inferred
+MS4A1,931.0,ENSG00000156738,membrane spanning 4-domains A1,protein-coding,NCBI,best inferred
+MSR1,4481.0,ENSG00000038945,macrophage scavenger receptor 1,protein-coding,NCBI,best inferred
+MST1,4485.0,ENSG00000173531,macrophage stimulating 1,protein-coding,NCBI,best inferred
+MX1,4599.0,ENSG00000157601,MX dynamin like GTPase 1,protein-coding,NCBI,best inferred
+MX2,4600.0,ENSG00000183486,MX dynamin like GTPase 2,protein-coding,NCBI,best inferred
+MXI1,4601.0,ENSG00000119950,"MAX interactor 1, dimerization protein",protein-coding,NCBI,best inferred
+MYD88,4615.0,ENSG00000172936,MYD88 innate immune signal transduction adaptor,protein-coding,NCBI,best inferred
+MYL5,4636.0,ENSG00000215375,myosin light chain 5,protein-coding,NCBI,best inferred
+MYOC,4653.0,ENSG00000034971,myocilin,protein-coding,NCBI,best inferred
+MYOZ1,58529.0,ENSG00000177791,myozenin 1,protein-coding,NCBI,best inferred
+MZB1,51237.0,ENSG00000170476,marginal zone B and B1 cell specific protein,protein-coding,NCBI,best inferred
+N4BP2L2,10443.0,ENSG00000244754,NEDD4 binding protein 2 like 2,protein-coding,NCBI,best inferred
+NADSYN1,55191.0,ENSG00000172890,NAD synthetase 1,protein-coding,NCBI,best inferred
+NARF,26502.0,ENSG00000141562,nuclear prelamin A recognition factor,protein-coding,NCBI,best inferred
+NBR1,4077.0,ENSG00000188554,NBR1 autophagy cargo receptor,protein-coding,NCBI,best inferred
+NCKIPSD,51517.0,ENSG00000213672,NCK interacting protein with SH3 domain,protein-coding,NCBI,best inferred
+NDRG1,10397.0,ENSG00000104419,N-myc downstream regulated 1,protein-coding,NCBI,best inferred
+NDST3,9348.0,ENSG00000164100,N-deacetylase and N-sulfotransferase 3,protein-coding,NCBI,best inferred
+NECAP2,55707.0,ENSG00000157191,NECAP endocytosis associated 2,protein-coding,NCBI,best inferred
+NEDD9,4739.0,ENSG00000111859,"neural precursor cell expressed, developmentally down-regulated 9",protein-coding,NCBI,best inferred
+NENF,29937.0,ENSG00000117691,neudesin neurotrophic factor,protein-coding,NCBI,landmark
+NFKB1,4790.0,ENSG00000109320,nuclear factor kappa B subunit 1,protein-coding,NCBI,best inferred
+NFKB2,4791.0,ENSG00000077150,nuclear factor kappa B subunit 2,protein-coding,NCBI,landmark
+NFKBIA,4792.0,ENSG00000100906,NFKB inhibitor alpha,protein-coding,NCBI,landmark
+NFKBIB,4793.0,ENSG00000104825,NFKB inhibitor beta,protein-coding,NCBI,landmark
+NFKBIE,4794.0,ENSG00000146232,NFKB inhibitor epsilon,protein-coding,NCBI,landmark
+NGLY1,55768.0,ENSG00000151092,N-glycanase 1,protein-coding,NCBI,best inferred
+NID2,22795.0,ENSG00000087303,nidogen 2,protein-coding,NCBI,best inferred
+NINJ1,4814.0,ENSG00000131669,ninjurin 1,protein-coding,NCBI,best inferred
+NINJ2,4815.0,ENSG00000171840,ninjurin 2,protein-coding,NCBI,best inferred
+NKX3-1,4824.0,ENSG00000167034,NK3 homeobox 1,protein-coding,NCBI,best inferred
+NLGN1,22871.0,ENSG00000169760,neuroligin 1,protein-coding,NCBI,best inferred
+NMI,9111.0,ENSG00000123609,N-myc and STAT interactor,protein-coding,NCBI,best inferred
+NNT,23530.0,ENSG00000112992,nicotinamide nucleotide transhydrogenase,protein-coding,NCBI,landmark
+NOL3,8996.0,ENSG00000140939,nucleolar protein 3,protein-coding,NCBI,landmark
+NOX4,50507.0,ENSG00000086991,NADPH oxidase 4,protein-coding,NCBI,best inferred
+NPY,4852.0,ENSG00000122585,neuropeptide Y,protein-coding,NCBI,best inferred
+NR1D2,9975.0,ENSG00000174738,nuclear receptor subfamily 1 group D member 2,protein-coding,NCBI,best inferred
+NR2E1,7101.0,ENSG00000112333,nuclear receptor subfamily 2 group E member 1,protein-coding,NCBI,best inferred
+NRF1,4899.0,ENSG00000106459,nuclear respiratory factor 1,protein-coding,NCBI,best inferred
+NRN1,51299.0,ENSG00000124785,neuritin 1,protein-coding,NCBI,best inferred
+NT5E,4907.0,ENSG00000135318,5'-nucleotidase ecto,protein-coding,NCBI,best inferred
+NT5M,56953.0,ENSG00000205309,"5',3'-nucleotidase, mitochondrial",protein-coding,NCBI,best inferred
+NUAK1,9891.0,ENSG00000074590,NUAK family kinase 1,protein-coding,NCBI,best inferred
+NUP50,10762.0,ENSG00000093000,nucleoporin 50,protein-coding,NCBI,best inferred
+OAS1,4938.0,ENSG00000089127,2'-5'-oligoadenylate synthetase 1,protein-coding,NCBI,best inferred
+OAS2,4939.0,ENSG00000111335,2'-5'-oligoadenylate synthetase 2,protein-coding,NCBI,best inferred
+OAS3,4940.0,ENSG00000111331,2'-5'-oligoadenylate synthetase 3,protein-coding,NCBI,best inferred
+OASL,8638.0,ENSG00000135114,2'-5'-oligoadenylate synthetase like,protein-coding,NCBI,best inferred
+ODC1,4953.0,ENSG00000115758,ornithine decarboxylase 1,protein-coding,NCBI,best inferred
+OGFR,11054.0,ENSG00000060491,opioid growth factor receptor,protein-coding,NCBI,best inferred
+OLR1,4973.0,ENSG00000173391,oxidized low density lipoprotein receptor 1,protein-coding,NCBI,best inferred
+OPCML,4978.0,ENSG00000183715,opioid binding protein/cell adhesion molecule like,protein-coding,NCBI,best inferred
+P2RX1,5023.0,ENSG00000108405,purinergic receptor P2X 1,protein-coding,NCBI,best inferred
+P2RY14,9934.0,ENSG00000174944,purinergic receptor P2Y14,protein-coding,NCBI,best inferred
+P4HA1,5033.0,ENSG00000122884,prolyl 4-hydroxylase subunit alpha 1,protein-coding,NCBI,best inferred
+P4HA2,8974.0,ENSG00000072682,prolyl 4-hydroxylase subunit alpha 2,protein-coding,NCBI,landmark
+PAM,5066.0,ENSG00000145730,peptidylglycine alpha-amidating monooxygenase,protein-coding,NCBI,best inferred
+PARP12,64761.0,ENSG00000059378,poly(ADP-ribose) polymerase family member 12,protein-coding,NCBI,best inferred
+PAWR,5074.0,ENSG00000177425,pro-apoptotic WT1 regulator,protein-coding,NCBI,best inferred
+PBLD,64081.0,ENSG00000108187,phenazine biosynthesis like protein domain containing,protein-coding,NCBI,best inferred
+PBX1,5087.0,ENSG00000185630,PBX homeobox 1,protein-coding,NCBI,best inferred
+PCMTD2,55251.0,ENSG00000203880,protein-L-isoaspartate (D-aspartate) O-methyltransferase domain containing 2,protein-coding,NCBI,best inferred
+PDAP1,11333.0,ENSG00000106244,PDGFA associated protein 1,protein-coding,NCBI,best inferred
+PDK1,5163.0,ENSG00000152256,pyruvate dehydrogenase kinase 1,protein-coding,NCBI,best inferred
+PDK3,5165.0,ENSG00000067992,pyruvate dehydrogenase kinase 3,protein-coding,NCBI,best inferred
+PDPN,10630.0,ENSG00000162493,podoplanin,protein-coding,NCBI,best inferred
+PEX1,5189.0,ENSG00000127980,peroxisomal biogenesis factor 1,protein-coding,NCBI,best inferred
+PFKFB3,5209.0,ENSG00000170525,"6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 3",protein-coding,NCBI,best inferred
+PFKFB4,5210.0,ENSG00000114268,"6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 4",protein-coding,NCBI,best inferred
+PFKL,5211.0,ENSG00000141959,"phosphofructokinase, liver type",protein-coding,NCBI,landmark
+PFKP,5214.0,ENSG00000067057,"phosphofructokinase, platelet",protein-coding,NCBI,best inferred
+PGAM1,5223.0,ENSG00000171314,phosphoglycerate mutase 1,protein-coding,NCBI,landmark
+PGAP1,80055.0,ENSG00000197121,post-GPI attachment to proteins 1,protein-coding,NCBI,best inferred
+PGF,5228.0,ENSG00000119630,placental growth factor,protein-coding,NCBI,best inferred
+PGK1,5230.0,ENSG00000102144,phosphoglycerate kinase 1,protein-coding,NCBI,best inferred
+PGM1,5236.0,ENSG00000079739,phosphoglucomutase 1,protein-coding,NCBI,landmark
+PHC2,1912.0,ENSG00000134686,polyhomeotic homolog 2,protein-coding,NCBI,best inferred
+PHF11,51131.0,ENSG00000136147,PHD finger protein 11,protein-coding,NCBI,best inferred
+PHLDA1,22822.0,ENSG00000139289,pleckstrin homology like domain family A member 1,protein-coding,NCBI,best inferred
+PHLDA2,7262.0,ENSG00000181649,pleckstrin homology like domain family A member 2,protein-coding,NCBI,best inferred
+PHLDA3,23612.0,ENSG00000174307,pleckstrin homology like domain family A member 3,protein-coding,NCBI,best inferred
+PIDD1,55367.0,ENSG00000177595,p53-induced death domain protein 1,protein-coding,NCBI,best inferred
+PIEZO2,63895.0,ENSG00000154864,piezo type mechanosensitive ion channel component 2,protein-coding,NCBI,best inferred
+PIK3C2B,5287.0,ENSG00000133056,phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 beta,protein-coding,NCBI,landmark
+PKM,5315.0,ENSG00000067225,pyruvate kinase M1/2,protein-coding,NCBI,best inferred
+PKNOX2,63876.0,ENSG00000165495,PBX/knotted 1 homeobox 2,protein-coding,NCBI,best inferred
+PLAU,5328.0,ENSG00000122861,"plasminogen activator, urokinase",protein-coding,NCBI,best inferred
+PLCB4,5332.0,ENSG00000101333,phospholipase C beta 4,protein-coding,NCBI,best inferred
+PLEK2,26499.0,ENSG00000100558,pleckstrin 2,protein-coding,NCBI,best inferred
+PLN,5350.0,ENSG00000198523,phospholamban,protein-coding,NCBI,best inferred
+PLOD1,5351.0,ENSG00000083444,"procollagen-lysine,2-oxoglutarate 5-dioxygenase 1",protein-coding,NCBI,best inferred
+PLOD2,5352.0,ENSG00000152952,"procollagen-lysine,2-oxoglutarate 5-dioxygenase 2",protein-coding,NCBI,best inferred
+PLSCR1,5359.0,ENSG00000188313,phospholipid scramblase 1,protein-coding,NCBI,landmark
+PLTP,5360.0,ENSG00000100979,phospholipid transfer protein,protein-coding,NCBI,best inferred
+PMEL,6490.0,ENSG00000185664,premelanosome protein,protein-coding,NCBI,best inferred
+PMEPA1,56937.0,ENSG00000124225,"prostate transmembrane protein, androgen induced 1",protein-coding,NCBI,best inferred
+PML,5371.0,ENSG00000140464,promyelocytic leukemia,protein-coding,NCBI,best inferred
+PNISR,25957.0,ENSG00000132424,PNN interacting serine and arginine rich protein,protein-coding,NCBI,best inferred
+PNP,4860.0,ENSG00000198805,purine nucleoside phosphorylase,protein-coding,NCBI,landmark
+POLH,5429.0,ENSG00000170734,DNA polymerase eta,protein-coding,NCBI,best inferred
+POLR3G,10622.0,ENSG00000113356,RNA polymerase III subunit G,protein-coding,NCBI,best inferred
+POP4,10775.0,ENSG00000105171,"POP4 homolog, ribonuclease P/MRP subunit",protein-coding,NCBI,landmark
+POT1,25913.0,ENSG00000128513,protection of telomeres 1,protein-coding,NCBI,best inferred
+PPFIA4,8497.0,ENSG00000143847,PTPRF interacting protein alpha 4,protein-coding,NCBI,best inferred
+PPM1D,8493.0,ENSG00000170836,"protein phosphatase, Mg2+/Mn2+ dependent 1D",protein-coding,NCBI,best inferred
+PPP2R5B,5526.0,ENSG00000068971,protein phosphatase 2 regulatory subunit B'beta,protein-coding,NCBI,best inferred
+PRCP,5547.0,ENSG00000137509,prolylcarboxypeptidase,protein-coding,NCBI,landmark
+PRDM1,639.0,ENSG00000057657,PR/SET domain 1,protein-coding,NCBI,best inferred
+PRKAB1,5564.0,ENSG00000111725,protein kinase AMP-activated non-catalytic subunit beta 1,protein-coding,NCBI,best inferred
+PRKD2,25865.0,ENSG00000105287,protein kinase D2,protein-coding,NCBI,best inferred
+PRNP,5621.0,ENSG00000171867,prion protein,protein-coding,NCBI,best inferred
+PRSS53,339105.0,ENSG00000151006,serine protease 53,protein-coding,NCBI,best inferred
+PSMB8,5696.0,ENSG00000204264,proteasome subunit beta 8,protein-coding,NCBI,landmark
+PSMB9,5698.0,ENSG00000240065,proteasome subunit beta 9,protein-coding,NCBI,best inferred
+PTCH1,5727.0,ENSG00000185920,patched 1,protein-coding,NCBI,best inferred
+PTX3,5806.0,ENSG00000163661,pentraxin 3,protein-coding,NCBI,best inferred
+PWP2,5822.0,ENSG00000241945,PWP2 small subunit processome component,protein-coding,NCBI,best inferred
+QRSL1,55278.0,ENSG00000130348,glutaminyl-tRNA amidotransferase subunit QRSL1,protein-coding,NCBI,best inferred
+RAB20,55647.0,ENSG00000139832,"RAB20, member RAS oncogene family",protein-coding,NCBI,best inferred
+RAB26,25837.0,ENSG00000167964,"RAB26, member RAS oncogene family",protein-coding,NCBI,best inferred
+RAB33B,83452.0,ENSG00000172007,"RAB33B, member RAS oncogene family",protein-coding,NCBI,best inferred
+RAB5B,5869.0,ENSG00000111540,"RAB5B, member RAS oncogene family",protein-coding,NCBI,best inferred
+RABGAP1,23637.0,ENSG00000011454,RAB GTPase activating protein 1,protein-coding,NCBI,best inferred
+RASL11B,65997.0,ENSG00000128045,RAS like family 11 member B,protein-coding,NCBI,best inferred
+RBM48,84060.0,ENSG00000127993,RNA binding motif protein 48,protein-coding,NCBI,best inferred
+RBPJ,3516.0,ENSG00000168214,recombination signal binding protein for immunoglobulin kappa J region,protein-coding,NCBI,best inferred
+RCOR3,55758.0,ENSG00000117625,REST corepressor 3,protein-coding,NCBI,best inferred
+REL,5966.0,ENSG00000162924,"REL proto-oncogene, NF-kB subunit",protein-coding,NCBI,best inferred
+RELB,5971.0,ENSG00000104856,"RELB proto-oncogene, NF-kB subunit",protein-coding,NCBI,landmark
+RETSAT,54884.0,ENSG00000042445,retinol saturase,protein-coding,NCBI,best inferred
+RGL1,23179.0,ENSG00000143344,ral guanine nucleotide dissociation stimulator like 1,protein-coding,NCBI,best inferred
+RGS10,6001.0,ENSG00000148908,regulator of G protein signaling 10,protein-coding,NCBI,best inferred
+RIOK3,8780.0,ENSG00000101782,RIO kinase 3,protein-coding,NCBI,best inferred
+RIPK2,8767.0,ENSG00000104312,receptor interacting serine/threonine kinase 2,protein-coding,NCBI,best inferred
+RLF,6018.0,ENSG00000117000,rearranged L-myc fusion,protein-coding,NCBI,best inferred
+RND1,27289.0,ENSG00000172602,Rho family GTPase 1,protein-coding,NCBI,best inferred
+RNF114,55905.0,ENSG00000124226,ring finger protein 114,protein-coding,NCBI,best inferred
+RNF138,51444.0,ENSG00000134758,ring finger protein 138,protein-coding,NCBI,best inferred
+RNF146,81847.0,ENSG00000118518,ring finger protein 146,protein-coding,NCBI,best inferred
+RNF19B,127544.0,ENSG00000116514,ring finger protein 19B,protein-coding,NCBI,best inferred
+RNF24,11237.0,ENSG00000101236,ring finger protein 24,protein-coding,NCBI,best inferred
+RORA,6095.0,ENSG00000069667,RAR related orphan receptor A,protein-coding,NCBI,best inferred
+RPS27L,51065.0,ENSG00000185088,ribosomal protein S27 like,protein-coding,NCBI,best inferred
+RPS29,6235.0,ENSG00000213741,ribosomal protein S29,protein-coding,NCBI,best inferred
+RRP12,23223.0,ENSG00000052749,ribosomal RNA processing 12 homolog,protein-coding,NCBI,landmark
+RSAD2,91543.0,ENSG00000134321,radical S-adenosyl methionine domain containing 2,protein-coding,NCBI,best inferred
+RTP4,64108.0,ENSG00000136514,receptor transporter protein 4,protein-coding,NCBI,best inferred
+RUSC2,9853.0,ENSG00000198853,RUN and SH3 domain containing 2,protein-coding,NCBI,best inferred
+SAMD9,54809.0,ENSG00000205413,sterile alpha motif domain containing 9,protein-coding,NCBI,best inferred
+SAMHD1,25939.0,ENSG00000101347,SAM and HD domain containing deoxynucleoside triphosphate triphosphohydrolase 1,protein-coding,NCBI,best inferred
+SAP30,8819.0,ENSG00000164105,Sin3A associated protein 30,protein-coding,NCBI,best inferred
+SCN3B,55800.0,ENSG00000166257,sodium voltage-gated channel beta subunit 3,protein-coding,NCBI,best inferred
+SCNN1D,6339.0,ENSG00000162572,sodium channel epithelial 1 delta subunit,protein-coding,NCBI,best inferred
+SCPEP1,59342.0,ENSG00000121064,serine carboxypeptidase 1,protein-coding,NCBI,best inferred
+SDC4,6385.0,ENSG00000124145,syndecan 4,protein-coding,NCBI,best inferred
+SEC61G,23480.0,ENSG00000132432,Sec61 translocon gamma subunit,protein-coding,NCBI,best inferred
+SECTM1,6398.0,ENSG00000141574,secreted and transmembrane 1,protein-coding,NCBI,best inferred
+SENP7,57337.0,ENSG00000138468,SUMO specific peptidase 7,protein-coding,NCBI,best inferred
+SERPINB5,5268.0,ENSG00000206075,serpin family B member 5,protein-coding,NCBI,best inferred
+SESN1,27244.0,ENSG00000080546,sestrin 1,protein-coding,NCBI,landmark
+SGPL1,8879.0,ENSG00000166224,sphingosine-1-phosphate lyase 1,protein-coding,NCBI,best inferred
+SH3BGRL,6451.0,ENSG00000131171,SH3 domain binding glutamate rich protein like,protein-coding,NCBI,best inferred
+SH3PXD2A,9644.0,ENSG00000107957,SH3 and PX domains 2A,protein-coding,NCBI,best inferred
+SIDT2,51092.0,ENSG00000149577,SID1 transmembrane family member 2,protein-coding,NCBI,best inferred
+SIRT2,22933.0,ENSG00000068903,sirtuin 2,protein-coding,NCBI,best inferred
+SLC11A2,4891.0,ENSG00000110911,solute carrier family 11 member 2,protein-coding,NCBI,landmark
+SLC15A3,51296.0,ENSG00000110446,solute carrier family 15 member 3,protein-coding,NCBI,best inferred
+SLC20A1,6574.0,ENSG00000144136,solute carrier family 20 member 1,protein-coding,NCBI,best inferred
+SLC25A28,81894.0,ENSG00000155287,solute carrier family 25 member 28,protein-coding,NCBI,best inferred
+SLC25A36,55186.0,ENSG00000114120,solute carrier family 25 member 36,protein-coding,NCBI,best inferred
+SLC26A4,5172.0,ENSG00000091137,solute carrier family 26 member 4,protein-coding,NCBI,best inferred
+SLC2A1,6513.0,ENSG00000117394,solute carrier family 2 member 1,protein-coding,NCBI,best inferred
+SLC2A6,11182.0,ENSG00000160326,solute carrier family 2 member 6,protein-coding,NCBI,landmark
+SLC35F2,54733.0,ENSG00000110660,solute carrier family 35 member F2,protein-coding,NCBI,landmark
+SLC4A7,9497.0,ENSG00000033867,solute carrier family 4 member 7,protein-coding,NCBI,best inferred
+SLC52A1,55065.0,ENSG00000132517,solute carrier family 52 member 1,protein-coding,NCBI,best inferred
+SLCO2A1,6578.0,ENSG00000174640,solute carrier organic anion transporter family member 2A1,protein-coding,NCBI,best inferred
+SLCO4A1,28231.0,ENSG00000101187,solute carrier organic anion transporter family member 4A1,protein-coding,NCBI,best inferred
+SMAD1,4086.0,ENSG00000170365,SMAD family member 1,protein-coding,NCBI,best inferred
+SMAD6,4091.0,ENSG00000137834,SMAD family member 6,protein-coding,NCBI,best inferred
+SMAD7,4092.0,ENSG00000101665,SMAD family member 7,protein-coding,NCBI,best inferred
+SMURF1,57154.0,ENSG00000198742,SMAD specific E3 ubiquitin protein ligase 1,protein-coding,NCBI,best inferred
+SMURF2,64750.0,ENSG00000108854,SMAD specific E3 ubiquitin protein ligase 2,protein-coding,NCBI,best inferred
+SNAI1,6615.0,ENSG00000124216,snail family transcriptional repressor 1,protein-coding,NCBI,best inferred
+SOCS3,9021.0,ENSG00000184557,suppressor of cytokine signaling 3,protein-coding,NCBI,best inferred
+SOD2,6648.0,ENSG00000112096,superoxide dismutase 2,protein-coding,NCBI,best inferred
+SP100,6672.0,ENSG00000067066,SP100 nuclear antigen,protein-coding,NCBI,best inferred
+SP110,3431.0,ENSG00000135899,SP110 nuclear body protein,protein-coding,NCBI,best inferred
+SP140L,93349.0,ENSG00000185404,SP140 nuclear body protein like,protein-coding,NCBI,best inferred
+SPAG4,6676.0,ENSG00000061656,sperm associated antigen 4,protein-coding,NCBI,landmark
+SPAG6,9576.0,ENSG00000077327,sperm associated antigen 6,protein-coding,NCBI,best inferred
+SPATA2L,124044.0,ENSG00000158792,spermatogenesis associated 2 like,protein-coding,NCBI,best inferred
+SPG11,80208.0,ENSG00000104133,"SPG11 vesicle trafficking associated, spatacsin",protein-coding,NCBI,best inferred
+SPHK1,8877.0,ENSG00000176170,sphingosine kinase 1,protein-coding,NCBI,best inferred
+SPRED2,200734.0,ENSG00000198369,sprouty related EVH1 domain containing 2,protein-coding,NCBI,landmark
+SPRY2,10253.0,ENSG00000136158,sprouty RTK signaling antagonist 2,protein-coding,NCBI,best inferred
+SPRY4,81848.0,ENSG00000187678,sprouty RTK signaling antagonist 4,protein-coding,NCBI,best inferred
+SPSB3,90864.0,ENSG00000162032,splA/ryanodine receptor domain and SOCS box containing 3,protein-coding,NCBI,best inferred
+SRGAP2,23380.0,ENSG00000266028,SLIT-ROBO Rho GTPase activating protein 2,protein-coding,NCBI,best inferred
+SRGAP3,9901.0,ENSG00000196220,SLIT-ROBO Rho GTPase activating protein 3,protein-coding,NCBI,best inferred
+SRGN,5552.0,ENSG00000122862,serglycin,protein-coding,NCBI,best inferred
+SRP14,6727.0,ENSG00000140319,signal recognition particle 14,protein-coding,NCBI,best inferred
+STAG1,10274.0,ENSG00000118007,stromal antigen 1,protein-coding,NCBI,best inferred
+STAT1,6772.0,ENSG00000115415,signal transducer and activator of transcription 1,protein-coding,NCBI,landmark
+STAT2,6773.0,ENSG00000170581,signal transducer and activator of transcription 2,protein-coding,NCBI,best inferred
+STAT5A,6776.0,ENSG00000126561,signal transducer and activator of transcription 5A,protein-coding,NCBI,best inferred
+STK17A,9263.0,ENSG00000164543,serine/threonine kinase 17a,protein-coding,NCBI,best inferred
+STX11,8676.0,ENSG00000135604,syntaxin 11,protein-coding,NCBI,best inferred
+STX1A,6804.0,ENSG00000106089,syntaxin 1A,protein-coding,NCBI,landmark
+STX6,10228.0,ENSG00000135823,syntaxin 6,protein-coding,NCBI,best inferred
+STX8,9482.0,ENSG00000170310,syntaxin 8,protein-coding,NCBI,best inferred
+SYF2,25949.0,ENSG00000117614,SYF2 pre-mRNA splicing factor,protein-coding,NCBI,best inferred
+SYNDIG1,79953.0,ENSG00000101463,synapse differentiation inducing 1,protein-coding,NCBI,best inferred
+TAP1,6890.0,ENSG00000168394,"transporter 1, ATP binding cassette subfamily B member",protein-coding,NCBI,best inferred
+TAP2,6891.0,ENSG00000204267,"transporter 2, ATP binding cassette subfamily B member",protein-coding,NCBI,best inferred
+TAPBP,6892.0,ENSG00000231925,TAP binding protein,protein-coding,NCBI,best inferred
+TBC1D15,64786.0,ENSG00000121749,TBC1 domain family member 15,protein-coding,NCBI,best inferred
+TCOF1,6949.0,ENSG00000070814,treacle ribosome biogenesis factor 1,protein-coding,NCBI,best inferred
+TDRD7,23424.0,ENSG00000196116,tudor domain containing 7,protein-coding,NCBI,best inferred
+TFDP2,7029.0,ENSG00000114126,transcription factor Dp-2,protein-coding,NCBI,best inferred
+THNSL2,55258.0,ENSG00000144115,threonine synthase like 2,protein-coding,NCBI,best inferred
+TICAM1,148022.0,ENSG00000127666,toll like receptor adaptor molecule 1,protein-coding,NCBI,landmark
+TIGAR,57103.0,ENSG00000078237,TP53 induced glycolysis regulatory phosphatase,protein-coding,NCBI,best inferred
+TLR2,7097.0,ENSG00000137462,toll like receptor 2,protein-coding,NCBI,best inferred
+TMEM140,55281.0,ENSG00000146859,transmembrane protein 140,protein-coding,NCBI,best inferred
+TMEM259,91304.0,ENSG00000182087,transmembrane protein 259,protein-coding,NCBI,best inferred
+TMEM45A,55076.0,ENSG00000181458,transmembrane protein 45A,protein-coding,NCBI,best inferred
+TMEM59,9528.0,ENSG00000116209,transmembrane protein 59,protein-coding,NCBI,best inferred
+TMEM62,80021.0,ENSG00000137842,transmembrane protein 62,protein-coding,NCBI,best inferred
+TMUB2,79089.0,ENSG00000168591,transmembrane and ubiquitin like domain containing 2,protein-coding,NCBI,best inferred
+TMX2,51075.0,ENSG00000213593,thioredoxin related transmembrane protein 2,protein-coding,NCBI,best inferred
+TNF,7124.0,ENSG00000232810,tumor necrosis factor,protein-coding,NCBI,best inferred
+TNFAIP1,7126.0,ENSG00000109079,TNF alpha induced protein 1,protein-coding,NCBI,best inferred
+TNFAIP2,7127.0,ENSG00000185215,TNF alpha induced protein 2,protein-coding,NCBI,best inferred
+TNFAIP3,7128.0,ENSG00000118503,TNF alpha induced protein 3,protein-coding,NCBI,best inferred
+TNFAIP6,7130.0,ENSG00000123610,TNF alpha induced protein 6,protein-coding,NCBI,best inferred
+TNFAIP8,25816.0,ENSG00000145779,TNF alpha induced protein 8,protein-coding,NCBI,best inferred
+TNFRSF10B,8795.0,ENSG00000120889,TNF receptor superfamily member 10b,protein-coding,NCBI,best inferred
+TNFRSF9,3604.0,ENSG00000049249,TNF receptor superfamily member 9,protein-coding,NCBI,best inferred
+TNFSF15,9966.0,ENSG00000181634,TNF superfamily member 15,protein-coding,NCBI,best inferred
+TNIP1,10318.0,ENSG00000145901,TNFAIP3 interacting protein 1,protein-coding,NCBI,landmark
+TNIP2,79155.0,ENSG00000168884,TNFAIP3 interacting protein 2,protein-coding,NCBI,best inferred
+TNNI3,7137.0,ENSG00000129991,"troponin I3, cardiac type",protein-coding,NCBI,best inferred
+TNS3,64759.0,ENSG00000136205,tensin 3,protein-coding,NCBI,best inferred
+TOP1,7150.0,ENSG00000198900,DNA topoisomerase I,protein-coding,NCBI,best inferred
+TP53I3,9540.0,ENSG00000115129,tumor protein p53 inducible protein 3,protein-coding,NCBI,best inferred
+TPM1,7168.0,ENSG00000140416,tropomyosin 1,protein-coding,NCBI,landmark
+TPPP,11076.0,ENSG00000171368,tubulin polymerization promoting protein,protein-coding,NCBI,best inferred
+TRAF1,7185.0,ENSG00000056558,TNF receptor associated factor 1,protein-coding,NCBI,best inferred
+TRANK1,9881.0,ENSG00000168016,tetratricopeptide repeat and ankyrin repeat containing 1,protein-coding,NCBI,best inferred
+TRIAP1,51499.0,ENSG00000170855,TP53 regulated inhibitor of apoptosis 1,protein-coding,NCBI,best inferred
+TRIB1,10221.0,ENSG00000173334,tribbles pseudokinase 1,protein-coding,NCBI,landmark
+TRIM14,9830.0,ENSG00000106785,tripartite motif containing 14,protein-coding,NCBI,best inferred
+TRIM21,6737.0,ENSG00000132109,tripartite motif containing 21,protein-coding,NCBI,best inferred
+TRIM22,10346.0,ENSG00000132274,tripartite motif containing 22,protein-coding,NCBI,best inferred
+TRIM25,7706.0,ENSG00000121060,tripartite motif containing 25,protein-coding,NCBI,best inferred
+TRIM38,10475.0,ENSG00000112343,tripartite motif containing 38,protein-coding,NCBI,best inferred
+TRIM5,85363.0,ENSG00000132256,tripartite motif containing 5,protein-coding,NCBI,best inferred
+TRIM52,84851.0,ENSG00000183718,tripartite motif containing 52,protein-coding,NCBI,best inferred
+TRIP10,9322.0,ENSG00000125733,thyroid hormone receptor interactor 10,protein-coding,NCBI,best inferred
+TSPAN2,10100.0,ENSG00000134198,tetraspanin 2,protein-coding,NCBI,best inferred
+TTC12,54970.0,ENSG00000149292,tetratricopeptide repeat domain 12,protein-coding,NCBI,best inferred
+TTC28,23331.0,ENSG00000100154,tetratricopeptide repeat domain 28,protein-coding,NCBI,best inferred
+TTC33,23548.0,ENSG00000113638,tetratricopeptide repeat domain 33,protein-coding,NCBI,best inferred
+TUBB4B,10383.0,ENSG00000188229,tubulin beta 4B class IVb,protein-coding,NCBI,best inferred
+TUFT1,7286.0,ENSG00000143367,tuftelin 1,protein-coding,NCBI,best inferred
+TYMP,1890.0,ENSG00000025708,thymidine phosphorylase,protein-coding,NCBI,best inferred
+TYR,7299.0,ENSG00000077498,tyrosinase,protein-coding,NCBI,best inferred
+UAP1L1,91373.0,ENSG00000197355,UDP-N-acetylglucosamine pyrophosphorylase 1 like 1,protein-coding,NCBI,best inferred
+UBA2,10054.0,ENSG00000126261,ubiquitin like modifier activating enzyme 2,protein-coding,NCBI,best inferred
+UBE2L6,9246.0,ENSG00000156587,ubiquitin conjugating enzyme E2 L6,protein-coding,NCBI,landmark
+UBE2Z,65264.0,ENSG00000159202,ubiquitin conjugating enzyme E2 Z,protein-coding,NCBI,best inferred
+UNC5B,219699.0,ENSG00000107731,unc-5 netrin receptor B,protein-coding,NCBI,best inferred
+USP18,11274.0,ENSG00000184979,ubiquitin specific peptidase 18,protein-coding,NCBI,best inferred
+UXS1,80146.0,ENSG00000115652,UDP-glucuronate decarboxylase 1,protein-coding,NCBI,best inferred
+VAMP5,10791.0,ENSG00000168899,vesicle associated membrane protein 5,protein-coding,NCBI,best inferred
+VAV3,10451.0,ENSG00000134215,vav guanine nucleotide exchange factor 3,protein-coding,NCBI,landmark
+VEGFA,7422.0,ENSG00000112715,vascular endothelial growth factor A,protein-coding,NCBI,best inferred
+VHL,7428.0,ENSG00000134086,von Hippel-Lindau tumor suppressor,protein-coding,NCBI,best inferred
+VKORC1,79001.0,ENSG00000167397,vitamin K epoxide reductase complex subunit 1,protein-coding,NCBI,best inferred
+VLDLR,7436.0,ENSG00000147852,very low density lipoprotein receptor,protein-coding,NCBI,best inferred
+VWA8,23078.0,ENSG00000102763,von Willebrand factor A domain containing 8,protein-coding,NCBI,best inferred
+WDR19,57728.0,ENSG00000157796,WD repeat domain 19,protein-coding,NCBI,best inferred
+WDR3,10885.0,ENSG00000065183,WD repeat domain 3,protein-coding,NCBI,best inferred
+WDR45B,56270.0,ENSG00000141580,WD repeat domain 45B,protein-coding,NCBI,best inferred
+WDR78,79819.0,ENSG00000152763,WD repeat domain 78,protein-coding,NCBI,best inferred
+WIPI2,26100.0,ENSG00000157954,"WD repeat domain, phosphoinositide interacting 2",protein-coding,NCBI,best inferred
+WSB1,26118.0,ENSG00000109046,WD repeat and SOCS box containing 1,protein-coding,NCBI,best inferred
+WTAP,9589.0,ENSG00000146457,WT1 associated protein,protein-coding,NCBI,best inferred
+XAF1,54739.0,ENSG00000132530,XIAP associated factor 1,protein-coding,NCBI,best inferred
+XK,7504.0,ENSG00000047597,X-linked Kx blood group,protein-coding,NCBI,best inferred
+XPC,7508.0,ENSG00000154767,"XPC complex subunit, DNA damage recognition and repair factor",protein-coding,NCBI,best inferred
+XRCC4,7518.0,ENSG00000152422,X-ray repair cross complementing 4,protein-coding,NCBI,best inferred
+XYLT1,64131.0,ENSG00000103489,xylosyltransferase 1,protein-coding,NCBI,best inferred
+YEATS2,55689.0,ENSG00000163872,YEATS domain containing 2,protein-coding,NCBI,best inferred
+YIPF5,81555.0,ENSG00000145817,Yip1 domain family member 5,protein-coding,NCBI,best inferred
+YRDC,79693.0,ENSG00000196449,yrdC N6-threonylcarbamoyltransferase domain containing,protein-coding,NCBI,best inferred
+ZBED8,63920.0,ENSG00000221886,zinc finger BED-type containing 8,protein-coding,NCBI,best inferred
+ZBP1,81030.0,ENSG00000124256,Z-DNA binding protein 1,protein-coding,NCBI,best inferred
+ZBTB25,7597.0,ENSG00000089775,zinc finger and BTB domain containing 25,protein-coding,NCBI,best inferred
+ZBTB3,79842.0,ENSG00000185670,zinc finger and BTB domain containing 3,protein-coding,NCBI,best inferred
+ZC3HAV1,56829.0,ENSG00000105939,"zinc finger CCCH-type containing, antiviral 1",protein-coding,NCBI,best inferred
+ZMAT3,64393.0,ENSG00000172667,zinc finger matrin-type 3,protein-coding,NCBI,best inferred
+ZMPSTE24,10269.0,ENSG00000084073,zinc metallopeptidase STE24,protein-coding,NCBI,best inferred
+ZNF200,7752.0,ENSG00000010539,zinc finger protein 200,protein-coding,NCBI,best inferred
+ZNF224,7767.0,ENSG00000267680,zinc finger protein 224,protein-coding,NCBI,best inferred
+ZNF292,23036.0,ENSG00000188994,zinc finger protein 292,protein-coding,NCBI,best inferred
+ZNF337,26152.0,ENSG00000130684,zinc finger protein 337,protein-coding,NCBI,best inferred
+ZNF350,59348.0,ENSG00000256683,zinc finger protein 350,protein-coding,NCBI,best inferred
+ZNF395,55893.0,ENSG00000186918,zinc finger protein 395,protein-coding,NCBI,landmark
+ZNF415,55786.0,ENSG00000170954,zinc finger protein 415,protein-coding,NCBI,best inferred
+ZNF451,26036.0,ENSG00000112200,zinc finger protein 451,protein-coding,NCBI,landmark
+ZNF571,51276.0,ENSG00000180479,zinc finger protein 571,protein-coding,NCBI,best inferred
+ZNF654,55279.0,ENSG00000175105,zinc finger protein 654,protein-coding,NCBI,best inferred
+ZNF669,79862.0,ENSG00000188295,zinc finger protein 669,protein-coding,NCBI,best inferred
+ZNF75D,7626.0,ENSG00000186376,zinc finger protein 75D,protein-coding,NCBI,best inferred
+ZNF79,7633.0,ENSG00000196152,zinc finger protein 79,protein-coding,NCBI,best inferred
+ZNF83,55769.0,ENSG00000167766,zinc finger protein 83,protein-coding,NCBI,best inferred
+ZSCAN31,64288.0,ENSG00000235109,zinc finger and SCAN domain containing 31,protein-coding,NCBI,best inferred
