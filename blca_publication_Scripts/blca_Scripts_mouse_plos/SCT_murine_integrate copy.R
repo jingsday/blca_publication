@@ -51,8 +51,11 @@ anchors <- FindIntegrationAnchors(object.list = obj.list, normalization.method =
 seurat.integrated <- IntegrateData(anchorset = anchors, normalization.method = "SCT")
 
 #Save intergrated data 
-#saveRDS(seurat.integrated, file = "murine_intergration_sct.rds")
+saveRDS(seurat.integrated, file = "~/Phd_project/project_UCD_blca/blca_publication_OUTPUT/murine_intergration_sct_SE.rds")
 
+# Read
+
+seurat.integrated <- readRDS("~/Phd_project/project_UCD_blca/blca_publication_OUTPUT/murine_intergration_sct_SE.rds")
 #Barcodes and samples of interest
 cluster_0_cells <- which(seurat.integrated@meta.data$seurat_clusters == 0)
 
@@ -73,7 +76,7 @@ seurat.integrated <- RunPCA(seurat.integrated, verbose = FALSE)
 seurat.integrated <- RunUMAP(seurat.integrated, reduction = "pca", dims = 1:30)
 
 seurat.integrated <- FindNeighbors(seurat.integrated, dims = 1:30, verbose = FALSE)
-seurat.integrated <- FindClusters(seurat.integrated, resolution = 0.5)
+seurat.integrated <- FindClusters(seurat.integrated, resolution = 0.1)
 
 
 head(seurat.integrated@meta.data@seurat)
@@ -87,6 +90,10 @@ p2 <- DimPlot(seurat.integrated, reduction = "umap", group.by = "Sample",
 p1 + p2
 combined <- p1+p2
 
+library(httpgd)
+hgd()
+print(combined)
+
 #Visualize marker genes as violin plots.
 DefaultAssay(seurat.integrated) <- "RNA"
 
@@ -95,5 +102,5 @@ p1 <- VlnPlot(seurat.integrated, features = c("Cdh1", "Ivl", "Upk1a", "Upk1b", "
 
 p1 <- FeaturePlot(seurat.integrated, features = c("Cdh1", "Ivl", "Upk1a", "Upk1b", "Upk3a", "Upk3b", "Slc14a1", "Upk2"), pt.size = 0.2,
                   ncol = 3)
-p1+p2
+print(p1)
 
