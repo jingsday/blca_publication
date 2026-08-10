@@ -12,7 +12,7 @@ library(sctransform)
 setwd('/home/jing/Phd_project/project_UCD_blca/blca_DATA/blca_DATA_mouse_GSE174182_RAW')
 
 names_list <- c("GSM5288668_Sample-3_", "GSM5288669_Sample-4_","GSM5288670_Sample-5_" ,
-                "GSM5288671_Sample-6_", "GSM5288672_Sample-7_", "GSM5288673_Sample-8_",
+                "GSM5288671_Sample-6_", "GSM5288672_Sample-7_", 
                 "GSM5288674_Sample-11_")
 
 
@@ -27,8 +27,8 @@ for (name in names_list) {
 
 ls()
 
-merged_seurat <- merge(GSM5288668, y = c(GSM5288669,GSM5288670, GSM5288671, GSM5288672, GSM5288673, GSM5288674),
-                       add.cell.ids = ls()[2:8],
+merged_seurat <- merge(GSM5288668, y = c(GSM5288669,GSM5288670, GSM5288671, GSM5288672, GSM5288674),
+                       add.cell.ids = ls()[2:7],
                        project = 'BLCA')
 
 # create a sample column
@@ -73,13 +73,12 @@ DefaultAssay(seurat.integrated) <- "integrated"
 seurat.integrated <- ScaleData(seurat.integrated, verbose = FALSE)
 
 seurat.integrated <- RunPCA(seurat.integrated, verbose = FALSE)
-seurat.integrated <- RunUMAP(seurat.integrated, reduction = "pca", dims = 1:30)
+seurat.integrated <- RunUMAP(seurat.integrated, reduction = "pca", dims = 1:50, seed.use = 0)
 
 seurat.integrated <- FindNeighbors(seurat.integrated, dims = 1:30, verbose = FALSE)
-seurat.integrated <- FindClusters(seurat.integrated, resolution = 0.1)
+seurat.integrated <- FindClusters(seurat.integrated, resolution = 0.05)
 
-
-head(seurat.integrated@meta.data@seurat)
+table(seurat.integrated@meta.data$seurat_clusters)
 
 #visualization
 
@@ -87,11 +86,11 @@ p1 <- DimPlot(seurat.integrated, reduction = "umap")
 p2 <- DimPlot(seurat.integrated, reduction = "umap", group.by = "Sample", 
               repel = TRUE,cols=c('red','green','blue','yellow','brown','orange','purple'))
 
-p1 + p2
-combined <- p1+p2
-
 library(httpgd)
 hgd()
+
+combined <- p1+p2
+
 print(combined)
 
 #Visualize marker genes as violin plots.
